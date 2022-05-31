@@ -1,9 +1,9 @@
 = Shell
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.4.0
-:revdate: 2022-08-16T18:00:27+09:00
-:revremark: add GitHub Actions to shell formatter and linter
+:revnumber: v0.5.0
+:revdate: 2022-08-16T18:00:52+09:00
+:revremark: add GitHub Actions to check shell format with reviewdog
 :description: Shell
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -20,9 +20,50 @@
 Use {shfmt_link}.
 
 :filename: lint-shell.yml
+:filename_on_pull_request: lint-shell-on-pull-request.yml
+:run_shfmt_with_reviewdog_link: link:{github_actions_marketplace_url}/run-shfmt-with-reviewdog[run-shfmt-with-reviewdog^]
 .GitHub Actions
 * link:{workflows_directory}/{filename}[{filename}^] +
   Use {sh_checker_link}.
+* link:{workflows_directory}/{filename_on_pull_request}[{filename_on_pull_request}^] +
+  Use {run_shfmt_with_reviewdog_link}.
+
+=== Q&A
+
+[%collapsible]
+====
+
+[qanda]
+Why divide workflows of GitHub Actions by events like push and pull request?::
+On push event of GitHub Actions,
+run-shfmt-with-reviewdog doesn't fail if there is a format violation.
+It also won't fail if `fail_on_error = true`.
+And run-shfmt-with-reviewdog can't reports result on push event. +
+Want to job fail if there is a format violation on push,
+so use sh-checker on push.
+Use run-shfmt-with-reviewdog
+because it's useful to report results by review comments.
+As mentioned earlier,
+run-shfmt-with-reviewdog doesn't reports result on push event.
+Want to use run-shfmt-with-reviewdog on push and sh-checker on pull request,
+so divide GitHub Actions workflows.
+
+.Can't change `reporter` of run-shfmt-with-reviewdog
+[NOTE]
+======
+`reporter` of run-shfmt-with-reviewdog can't be changed from `github-pr-review`.
+That's run-shfmt-with-reviewdog can't set `github-check` to `reporter`.
+
+.If there is a format violation at push, does the job fail?
+[horizontal]
+github-pr-review:: No
+github-check:: Yes
+
+See link:{github_url}/reviewdog/reviewdog#reporters[
+reviewdog documentation^] for details.
+======
+====
+
 
 == Linter
 
