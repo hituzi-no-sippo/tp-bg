@@ -19,7 +19,8 @@ rules:
   document-start:
     level: warning
   empty-lines: enable
-  empty-values: disable
+  # default is disable
+  empty-values: enable
   hyphens: enable
   indentation: enable
   key-duplicates: enable
@@ -27,8 +28,11 @@ rules:
   line-length: enable
   new-line-at-end-of-file: enable
   new-lines: enable
-  octal-values: disable
+  # default is disable
+  octal-values: enable
   quoted-strings: disable
   trailing-spaces: enable
   truthy:
     level: warning
+    # `on` is for GitHub Actions.
+    allowed-values: ["true", "false", "on"]
