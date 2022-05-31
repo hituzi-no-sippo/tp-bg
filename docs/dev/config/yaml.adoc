@@ -1,9 +1,9 @@
 = YAML
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.5.0
-:revdate: 2022-07-27T13:38:29+09:00
-:revremark: add yamllint of linter
+:revnumber: v0.6.0
+:revdate: 2022-10-14T16:30:20+09:00
+:revremark: add link to configuration for YAML linter
 :description: YAML
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -27,6 +27,8 @@ link:{root_directory}/.dprint.json[Configuration File^]
 
 :yamllint_link: link:https://yamllint.readthedocs.io[yamllint^]
 Use {yamllint_link}.
+
+link:{root_directory}/.yamllint.yml[Configuration File^]
 
 
 '''
