@@ -77,6 +77,13 @@ repos:
         types:
           - text
 
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      # Style
+      - id: trailing-whitespace
+        args: [--markdown-linebreak-ext=md]
+
   - repo: https://github.com/pre-commit-ci/pre-commit-ci-config
     rev: v1.5.1
     hooks:
