@@ -1,9 +1,9 @@
 = Git hooks
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.5.0
-:revdate: 2022-07-27T17:45:13+09:00
-:revremark: add hook to trim trailing spaces
+:revnumber: v0.6.0
+:revdate: 2022-07-27T17:47:56+09:00
+:revremark: add git pre-commit hook for fix end of file
 :description: Git hooks
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -30,9 +30,11 @@ If there is no official `language: system` hook, use a local hook.
 === Style
 
 :trim_trailing_whitespace_link: link:{pre_commit_repository_url}#trailing-whitespace[trim trailing spaces^]
+:end_of_line_fixer_link: link:{pre_commit_repository_url}#end-of-file-fixer[end of line fixer^]
 * {trim_trailing_whitespace_link}
   `end of line____` (`_` is space) => `end of line`
   Don't trim markdowns.
+* {end_of_line_fixer_link}
 
 === pre-commit
 

@@ -83,6 +83,7 @@ repos:
       # Style
       - id: trailing-whitespace
         args: [--markdown-linebreak-ext=md]
+      - id: end-of-file-fixer
 
   - repo: https://github.com/pre-commit-ci/pre-commit-ci-config
     rev: v1.5.1
