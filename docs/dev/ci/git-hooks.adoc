@@ -1,9 +1,9 @@
 = Git hooks
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.8.0
-:revdate: 2022-07-27T17:56:30+09:00
-:revremark: add git pre-commit hook for protect main branches
+:revnumber: v0.9.0
+:revdate: 2022-07-27T17:59:19+09:00
+:revremark: add git pre-commit hook to check merge conflict
 :description: Git hooks
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -45,12 +45,14 @@ If there is no official `language: system` hook, use a local hook.
 === Git
 
 :no_commit_to_branch_link: link:{pre_commit_repository_url}#no-commit-to-branch[no commit to branch]
+:check_merge_conflict_link: link:{pre_commit_repository_url}#check-merge-conflict[check merge conflict]
 * {no_commit_to_branch_link}
   Protect main branches from direct push.
   You could do something similar with link:{repository_url}/settings/branch_protection_rules/new[
   branch protection rules^].
   (See also link:https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests[
   Defining the mergeability of pull requests^].)
+* {check_merge_conflict_link}
 
 === pre-commit
 
