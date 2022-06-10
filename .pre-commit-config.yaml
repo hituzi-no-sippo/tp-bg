@@ -89,6 +89,8 @@ repos:
       - id: no-commit-to-branch
       - id: check-merge-conflict
       - id: check-vcs-permalinks
+      # File
+      - id: fix-byte-order-marker
 
   - repo: https://github.com/pre-commit-ci/pre-commit-ci-config
     rev: v1.5.1
