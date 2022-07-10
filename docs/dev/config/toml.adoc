@@ -1,14 +1,16 @@
 = TOML
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.3.0
-:revdate: 2022-07-30T09:14:28+09:00
-:revremark: add link to configuration file for TOML formatter
+:revnumber: v0.4.0
+:revdate: 2022-07-30T09:37:17+09:00
+:revremark: add pre-commit hooks to format and lint
 :description: TOML
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
 :creation_date: 2022-07-27T19:23:16+09:00
+:github_url: https://github.com
 :root_directory: ../../..
+:pre_commit_config_file: {root_directory}/.pre-commit-config.yaml
 
 == Format & Lint
 
@@ -16,6 +18,11 @@
 Use {taplo_link}.
 
 link:{root_directory}/.taplo.toml[Configuration File^]
+
+.Git Hooks
+pre-commit::
+  Use link:{pre_commit_config_file}#:~:text=id%3A%20taplo%2Dformat[
+  local hook^]
 
 
 '''
