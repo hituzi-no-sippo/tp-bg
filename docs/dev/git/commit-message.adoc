@@ -1,14 +1,16 @@
 = Git commit message
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.3.0
-:revdate: 2022-07-11T20:29:16+09:00
-:revremark: add ignore merge commit
+:revnumber: v0.4.0
+:revdate: 2022-10-15T13:27:01+09:00
+:revremark: add commit-msg hook for lint
 :description: Git commit message tools
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
 :creation_date: 2022-07-11T15:36:50+09:00
+:github_url: https://github.com
 :root_directory: ../../..
+:pre_commit_config_file: {root_directory}/.pre-commit-config.yaml
 
 :conventional_commits_link: link:https://www.conventionalcommits.org[Conventional Commits^]
 == {conventional_commits_link}
@@ -26,6 +28,14 @@ Cocogitto ignores merge commit.
 For examples `Merge branch 'main' ...`, `Merge pull request ...`.
 link:{cocogitto_documentation_url}#deal-with-merge-commits[
 This is because set `ignore_merge_commits = true` in the configuration file^].
+
+=== Git hooks
+
+:repository_url_of_pre_commit_with_cocogitto: hituzi-no-sippo/pre-commit-hooks-with-cocogitto
+:pre_commit_with_cocogitto_link: link:{github_url}/{repository_url_of_pre_commit_with_cocogitto}[{repository_url_of_pre_commit_with_cocogitto}^]
+commit-msg::
+  Use link:{pre_commit_config_file}#:~:text=repo%3A%20https%3A%2F/github.com/hituzi%2Dno%2Dsippo/pre%2Dcommit%2Dhooks%2Dwith%2Dcocogitto[
+  pre-commit^] ({pre_commit_with_cocogitto_link})
 
 
 '''
