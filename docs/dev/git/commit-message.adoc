@@ -1,19 +1,31 @@
 = Git commit message
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.2.0
-:revdate: 2022-07-11T16:51:15+09:00
-:revremark: add linter for Conventional Commits
+:revnumber: v0.3.0
+:revdate: 2022-07-11T20:29:16+09:00
+:revremark: add ignore merge commit
 :description: Git commit message tools
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
 :creation_date: 2022-07-11T15:36:50+09:00
+:root_directory: ../../..
 
 :conventional_commits_link: link:https://www.conventionalcommits.org[Conventional Commits^]
 == {conventional_commits_link}
 
 :cocogitto_url: https://docs.cocogitto.io
 Lint commit message with link:{cocogitto_url}[Cocogitto^].
+
+:cocogitto_documentation_url: https://docs.cocogitto.io/guide
+=== Configuration
+
+link:{root_directory}/cog.toml[Configuration File^]
+
+.Ignore Merge Commit
+Cocogitto ignores merge commit.
+For examples `Merge branch 'main' ...`, `Merge pull request ...`.
+link:{cocogitto_documentation_url}#deal-with-merge-commits[
+This is because set `ignore_merge_commits = true` in the configuration file^].
 
 
 '''
