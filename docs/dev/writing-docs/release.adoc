@@ -1,13 +1,17 @@
 = Release
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.1.0
-:revdate: 2022-07-14T16:40:10+09:00
-:revremark: expand template
+:revnumber: v0.2.0
+:revdate: 2022-07-17T16:04:38+09:00
+:revremark: add git-cliff of CHANGELOG generator
 :description: Release
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
 :creation_date: 2022-07-14T16:37:15+09:00
+:github_url: https://github.com
+
+:git_cliff_url: {github_url}/orhun/git-cliff
+Use link:{git_cliff_url}[git-cliff^] to generate CHANGELOG.
 
 
 '''
