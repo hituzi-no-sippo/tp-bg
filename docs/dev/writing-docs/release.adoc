@@ -59,7 +59,7 @@ The next commit is Security Group:
 ** perf
 ** revert
 
-.For Examples
+.Examples
 * `fix(security): fix private key`
 * `feat(key): security`
 * {empty}
