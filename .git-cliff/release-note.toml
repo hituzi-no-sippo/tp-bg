@@ -32,11 +32,11 @@ conventional_commits = true
 filter_unconventional = true
 split_commits = false
 commit_parsers = [
+  { message = "^(refactor|style|test|ci|build|chore)", skip = true },
   { message = "^.*: add", group = "Added" },
   { message = "^.*: support", group = "Added" },
   { message = "^.*: remove", group = "Removed" },
   { message = "^.*: delete", group = "Removed" },
-  { message = "^test", group = "Fixed" },
   { message = "^fix", group = "Fixed" },
   { message = "^.*: fix", group = "Fixed" },
   { message = "^.*", group = "Changed" },
