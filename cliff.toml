@@ -20,7 +20,7 @@ body = """
         {% endif -%}
         #### {{ format_scope }}
         {% for commit in commits %}
-            - {{ commit.message | upper_first }}\
+            - {{ commit.message | upper_first }} ([{{ commit.id }}]({{ 'https://github.com/hituzi-no-sippo/template-repository/commit/' ~ commit.id }}))\
         {% endfor %}
     {% endfor %}\
 {% endfor %}\n
