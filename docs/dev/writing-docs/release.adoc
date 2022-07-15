@@ -1,17 +1,33 @@
 = Release
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.2.0
-:revdate: 2022-07-17T16:04:38+09:00
-:revremark: add git-cliff of CHANGELOG generator
+:revnumber: v0.3.0
+:revdate: 2023-01-24T21:59:34+09:00
+:revremark: add link to config file
 :description: Release
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
 :creation_date: 2022-07-14T16:37:15+09:00
 :github_url: https://github.com
+:root_directory: ../../..
 
 :git_cliff_url: {github_url}/orhun/git-cliff
 Use link:{git_cliff_url}[git-cliff^] to generate CHANGELOG.
+
+[horizontal]
+`CHANGELOG.md`::
+  For Developer.
+
+:git_cliff_main_url: {git_cliff_url}/blob/main
+:detailed_config_link: link:{git_cliff_main_url}/examples/detailed.toml[Detailed^]
+== CHANGELOG.md
+
+.Configuration File
+link:{root_directory}/cliff.toml[cliff.toml^] +
+`cliff.toml` is git-cliff default configuration file path.
+
+.Reference Configuration
+* {detailed_config_link}
 
 
 '''
