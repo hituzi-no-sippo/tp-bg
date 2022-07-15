@@ -15,7 +15,24 @@ body = """
 {% else %}\
     ## [Unreleased]
 {% endif %}\
-{% for group, commits in commits | group_by(attribute="group") %}
+{% for group, commits in commits | filter(attribute="breaking", value=true) | group_by(attribute="group") %}
+    ### Breaking Change
+
+    #### {{ group | upper_first }}
+    {% for scope, commits in commits | group_by(attribute="scope") %}
+        {% set replaced_scope = scope | replace(from="-", to=" ") -%}
+        {% if replaced_scope is matching("[A-Z]$") -%}
+            {% set format_scope = replaced_scope -%}
+        {% else -%}
+            {% set format_scope = replaced_scope | title -%}
+        {% endif -%}
+        ##### {{ format_scope }}
+        {% for commit in commits %}
+            - {{ commit.message | upper_first }} ({{ commit.id }})\
+        {% endfor %}
+    {% endfor %}\
+{% endfor -%}\n
+{% for group, commits in commits | filter(attribute="breaking", value=false) | group_by(attribute="group") %}
     ### {{ group | upper_first }}
     {% for scope, commits in commits | group_by(attribute="scope") %}
         {% set replaced_scope = scope | replace(from="-", to=" ") -%}
