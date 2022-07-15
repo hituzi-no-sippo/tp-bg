@@ -9,6 +9,12 @@ body = """
 {% else %}\
     ## [unreleased]
 {% endif %}\
+{% if previous %}\
+    {% if previous.commit_id %}
+        [{{ previous.version }}]({{ previous.commit_id }})...\
+            [{{ version }}]({{ commit_id }})
+    {% endif %}\
+{% endif %}\
 {% for group, commits in commits | filter(attribute="breaking", value=true) | group_by(attribute="group") %}
     ### Breaking Change
 
