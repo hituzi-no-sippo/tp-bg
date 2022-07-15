@@ -1,9 +1,9 @@
 = Release
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.6.0
-:revdate: 2023-01-24T22:03:42+09:00
-:revremark: add security group
+:revnumber: v0.7.0
+:revdate: 2023-01-24T22:41:26+09:00
+:revremark: add link of scoped config
 :description: Release
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -20,6 +20,7 @@ Use link:{git_cliff_url}[git-cliff^] to generate CHANGELOG.
 
 :git_cliff_main_url: {git_cliff_url}/blob/main
 :detailed_config_link: link:{git_cliff_main_url}/examples/detailed.toml[Detailed^]
+:scoped_config_link: link:{git_cliff_main_url}/examples/scoped.toml[Scoped^]
 == CHANGELOG.md
 
 .Configuration File
@@ -35,6 +36,7 @@ will be included into `v1.0.0` tag.
 
 .Reference Configuration
 * {detailed_config_link}
+* {scoped_config_link}
 
 === Replacement for issue numbers
 
