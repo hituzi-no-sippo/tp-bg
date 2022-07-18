@@ -1,9 +1,9 @@
 = Release
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.9.0
-:revdate: 2022-08-07T10:09:49+09:00
-:revremark: add cocogitto of bump up tool
+:revnumber: v0.10.0
+:revdate: 2022-08-07T10:14:20+09:00
+:revremark: add description of `scripts/prepare-release.sh`
 :description: Release
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -20,6 +20,31 @@ Use link:{git_cliff_url}[git-cliff^] to generate CHANGELOG.
 
 :cocogitto_url: https://docs.cocogitto.io
 :cocogitto_guide_url: {cocogitto_url}/guide
+== Prepare for release
+
+:release_scripts_directory: scripts/release
+:prepare_release_shell_path: {release_scripts_directory}/prepare-release.sh
+link:{root_directory}/{prepare_release_shell_path}[
+Run `bash {prepare_release_shell_path}` to prepare for release.^]
+
+.`prepare-release.sh`
+. Automatically bump versions
+. Generate CHANGELOG as `CHANGELOG.md`
+. Create a commit containing `CHANGELOG.md` +
+  Commit message is `chore(release): prepare for <VERSION>`.
+. Create git tag +
+  Tag name is `<VERSION>`.
+
+[NOTE]
+.`bump_hooks` of cocogitto isn't used
+====
+This is because link:{cocogitto_guide_url}/#bump-hooks[
+the hooks^] aren't ran when `cog bump --dry-run` is run.
+
+`cog bump` isn't used. `cog bump` create CHANGELOG.
+We want to create CHANGELOG with git-cliff.
+====
+
 :git_cliff_main_url: {git_cliff_url}/blob/main
 :detailed_config_link: link:{git_cliff_main_url}/examples/detailed.toml[Detailed^]
 :scoped_config_link: link:{git_cliff_main_url}/examples/scoped.toml[Scoped^]
