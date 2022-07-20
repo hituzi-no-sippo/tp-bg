@@ -3,3 +3,4 @@
 npm
 dockerfile
 gomod
+dprint
