@@ -1,14 +1,37 @@
 = Natural language
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.1.0
-:revdate: 2022-07-25T15:19:20+09:00
-:revremark: Expand template
-:description: Natural Language
+:revnumber: v0.2.0
+:revdate: 2022-07-25T15:27:47+09:00
+:revremark: Add vale of linter
+:description: Natural language
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
 :creation_date: 2022-07-25T15:19:20+09:00
+:root_directory: ../../..
 
+== Lint
+
+:vale_url: https://vale.sh
+Use link:{vale_url}[Vale^].
+
+link:{root_directory}/.vale.ini[Configuration File^]
+
+.Supported formats
+* HTML
+* Markdown
+* AsciiDoc
+* Org
+* Source Code Comments
+** C
+** JavaScript
+** Python
+** Go
+** CSS
+
+:vale_topic_docs_url: {vale_url}/docs/topics
+For more supported file types,
+please read link:{vale_topic_docs_url}/scoping[Vale Scoping^].
 
 
 '''
