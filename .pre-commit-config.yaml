@@ -4,6 +4,17 @@ default_stages:
   - commit
 
 repos:
+  # YAML
+  # Formatter
+  - repo: local
+    hooks:
+      - id: dprint
+        name: dprint
+        language: system
+        entry: dprint fmt
+        types_or:
+          - yaml
+
   - repo: https://github.com/pre-commit-ci/pre-commit-ci-config
     rev: v1.5.1
     hooks:
@@ -15,3 +26,6 @@ ci:
     fix(git-hook): auto fixes from pre-commit.com hooks
 
     for more information, see https://pre-commit.ci
+
+  skip:
+    - dprint
