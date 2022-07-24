@@ -1,9 +1,9 @@
 = Shell
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.5.0
-:revdate: 2022-08-16T18:00:52+09:00
-:revremark: add GitHub Actions to check shell format with reviewdog
+:revnumber: v0.6.0
+:revdate: 2022-08-16T18:01:14+09:00
+:revremark: add GitHub Actions to lint format with reviewdog
 :description: Shell
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -74,9 +74,13 @@ If you want to modify quotes automatically (`+${hoo}+` => `"$hoo"`), use link:{g
 shellharden^].
 
 :filename: lint-shell.yml
+:filename_on_pull_request: lint-shell-on-pull-request.yml
+:run_shellcheck_with_reviewdog_link: link:{github_actions_marketplace_url}/run-shellcheck-with-reviewdog[run-shellcheck-with-reviewdog^]
 .GitHub Actions
 * link:{workflows_directory}/{filename}[{filename}^] +
   Use {sh_checker_link}.
+* link:{workflows_directory}/{filename_on_pull_request}[{filename_on_pull_request}^] +
+  Use {run_shellcheck_with_reviewdog_link}.
 
 
 '''
