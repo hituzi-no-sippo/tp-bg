@@ -1,0 +1,6 @@
+hituzi
+sippo
+automerge
+config
+reenable
+declaratively
