@@ -11,3 +11,4 @@ pyflakes
 shfmt
 shellcheck
 shellharden
+[Dd]asel

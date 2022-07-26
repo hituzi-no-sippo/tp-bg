@@ -1,9 +1,9 @@
 = JSON
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.4.0
-:revdate: 2022-07-26T17:12:27+09:00
-:revremark: Add link to configuration file of formatter
+:revnumber: v0.5.0
+:revdate: 2022-07-26T18:41:58+09:00
+:revremark: add Dasel of validator
 :description: JSON
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -22,6 +22,11 @@ link:{root_directory}/.dprint.json[Configuration File^]
 :filename: lint-json.yml
 .GitHub Actions
 * link:{workflows_directory}/{filename}[{filename}^]
+
+== Validate
+
+:dasel_link: link:https://daseldocs.tomwright.me[Dasel^]
+Use {dasel_link}.
 
 
 '''
