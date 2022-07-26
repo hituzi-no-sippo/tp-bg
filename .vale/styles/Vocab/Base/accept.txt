@@ -9,3 +9,5 @@ reviewdog
 shellcheck
 pyflakes
 shfmt
+shellcheck
+shellharden

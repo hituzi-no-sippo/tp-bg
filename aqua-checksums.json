@@ -11,6 +11,11 @@
       "algorithm": "sha256"
     },
     {
+      "id": "github_release/github.com/koalaman/shellcheck/v0.9.0/shellcheck-v0.9.0.linux.x86_64.tar.xz",
+      "checksum": "157FD8B2C18A257F3876E23015580EA63D27B12C4F13F87D625A180E8CA042E7501271D15EDEB36E7B5780DA73815B45386A33E063AB1C891D838F35C778A8AC",
+      "algorithm": "sha512"
+    },
+    {
       "id": "github_release/github.com/mvdan/sh/v3.6.0/shfmt_v3.6.0_linux_amd64",
       "checksum": "BF0318A8A2778963584E3B7833662D6D00086E2EB234B838B52BDA37F81BCE1BB4408C20C9DB82B74E49FDDABD74642C2FD125E908B6428B1E107BF9F9F65696",
       "algorithm": "sha512"
