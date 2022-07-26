@@ -1,9 +1,9 @@
 = Template repository
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.10.0
-:revdate: 2022-07-25T19:56:30+09:00
-:revremark: add actionlint of GitHub Actions linter
+:revnumber: v0.11.0
+:revdate: 2022-08-03T17:50:09+09:00
+:revremark: add shfmt of shell formatter
 :description: README for {doctitle}
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -16,6 +16,12 @@
 :aqua_url: https://aquaproj.github.io
 
 == Tools
+
+=== Shell
+
+:shfmt_link: link:{github_url}/mvdan/sh[shfmt^]
+[horizontal]
+Format:: {shfmt_link}
 
 :dprint_url: https://dprint.dev
 :dprint_link: link:{dprint_url}[dprint^]

@@ -11,6 +11,11 @@
       "algorithm": "sha256"
     },
     {
+      "id": "github_release/github.com/mvdan/sh/v3.6.0/shfmt_v3.6.0_linux_amd64",
+      "checksum": "BF0318A8A2778963584E3B7833662D6D00086E2EB234B838B52BDA37F81BCE1BB4408C20C9DB82B74E49FDDABD74642C2FD125E908B6428B1E107BF9F9F65696",
+      "algorithm": "sha512"
+    },
+    {
       "id": "github_release/github.com/rhysd/actionlint/v1.6.22/actionlint_1.6.22_linux_amd64.tar.gz",
       "checksum": "7D7A3061B59718728788E75E6A177C621A31A683FFD21FEDEABC1296FC2EE289",
       "algorithm": "sha256"

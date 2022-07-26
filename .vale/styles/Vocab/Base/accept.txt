@@ -8,3 +8,4 @@ actionlint
 reviewdog
 shellcheck
 pyflakes
+shfmt
