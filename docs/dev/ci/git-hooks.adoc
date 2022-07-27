@@ -1,0 +1,17 @@
+= Git hooks
+:author: hituzi no sippo
+:email: dev@hituzi-no-sippo.me
+:revnumber: v0.1.0
+:revdate: 2022-07-24T17:28:24+09:00
+:revremark: expand template
+:description: Git hooks
+:copyright: Copyright (C) 2022 {author}
+// Custom Attributes
+:creation_date: 2022-07-24T17:28:24+09:00
+
+
+
+'''
+
+:author_link: link:https://github.com/hituzi-no-sippo[{author}^]
+Copyright (C) 2022 {author_link}
