@@ -99,6 +99,8 @@ repos:
       # Symlink
       - id: check-symlinks
       - id: destroyed-symlinks
+      # Security
+      - id: detect-private-key
 
   - repo: https://github.com/pre-commit-ci/pre-commit-ci-config
     rev: v1.5.1
