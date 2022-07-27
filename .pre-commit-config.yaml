@@ -1,4 +1,14 @@
 ---
+# Can't use YAML anchors in the pre-commit configuration.
+default_stages:
+  - commit
+
+repos:
+  - repo: https://github.com/pre-commit-ci/pre-commit-ci-config
+    rev: v1.5.1
+    hooks:
+      - id: check-pre-commit-ci-config
+
 ci:
   autofix_commit_msg: |
     fix(git-hook): auto fixes from pre-commit.com hooks
