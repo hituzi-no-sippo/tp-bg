@@ -1,9 +1,9 @@
 = YAML
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.8.0
-:revdate: 2022-08-06T10:21:12+09:00
-:revremark: Add pre-commit to check format
+:revnumber: v0.9.0
+:revdate: 2022-08-06T10:21:27+09:00
+:revremark: Add pre-commit to lint
 :description: YAML
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -36,6 +36,12 @@ pre-commit::
 Use {yamllint_link}.
 
 link:{root_directory}/.yamllint.yml[Configuration File^]
+
+:pre_commit_for_yaml_lint_link: https://yamllint.readthedocs.io/en/stable/integration.html#integration-with-pre-commit[yamllint pre-commit^]
+.Git Hooks
+pre-commit::
+  Use link:{pre_commit_config_file}#:~:text=repo%3A%20https%3A%2F/github.com/adrienverge/yamllint.git[
+  pre-commit^] ({pre_commit_for_yaml_lint_link})
 
 :filename: lint-yaml.yml
 :github_actions_marketplace_url: {github_url}/marketplace/actions
