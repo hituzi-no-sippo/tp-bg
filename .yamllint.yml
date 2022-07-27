@@ -3,6 +3,9 @@ yaml-files:
   - "*.yaml"
   - "*.yml"
 
+ignore: |
+  .vale/styles
+
 rules:
   braces: enable
   brackets: enable
