@@ -1,9 +1,9 @@
 = Markdown
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.5.0
-:revdate: 2022-07-30T12:25:17+09:00
-:revremark: Add GitHub Action to check format
+:revnumber: v0.6.0
+:revdate: 2022-08-07T13:02:12+09:00
+:revremark: add markdownlint-cli of linter
 :description: Markdown
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -29,6 +29,14 @@ pre-commit::
 :filename: lint-markdown.yml
 .GitHub Actions
 * link:{workflows_directory}/{filename}[{filename}^]
+
+== Lint
+
+:markdownlint_cli_repository_name: igorshubovych/markdownlint-cli
+:markdownlint_cli_link: link:{github_url}/{markdownlint_cli_repository_name}[markdownlint-cli^]
+Use {markdownlint_cli_link}.
+
+Enable automerge of minor update on Renovate.
 
 
 '''
