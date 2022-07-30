@@ -1,18 +1,21 @@
 = TOML
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.2.0
-:revdate: 2022-07-30T09:12:36+09:00
-:revremark: add taplo of TOML formatter & linter
+:revnumber: v0.3.0
+:revdate: 2022-07-30T09:14:28+09:00
+:revremark: add link to configuration file for TOML formatter
 :description: TOML
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
 :creation_date: 2022-07-27T19:23:16+09:00
+:root_directory: ../../..
 
 == Format & Lint
 
 :taplo_link: link:https://taplo.tamasfe.dev/[taplo^]
 Use {taplo_link}.
+
+link:{root_directory}/.taplo.toml[Configuration File^]
 
 
 '''
