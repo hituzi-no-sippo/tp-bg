@@ -1,14 +1,16 @@
 = Markdown
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.3.0
-:revdate: 2022-07-30T11:55:02+09:00
-:revremark: add link to configuration file of formatter
+:revnumber: v0.4.0
+:revdate: 2022-07-30T12:00:25+09:00
+:revremark: Add pre-commit to check format
 :description: Markdown
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
 :creation_date: 2022-07-30T11:33:46+09:00
+:github_url: https://github.com
 :root_directory: ../../..
+:pre_commit_config_file: {root_directory}/.pre-commit-config.yaml
 
 == Format
 
@@ -17,6 +19,12 @@
 Use link:{dprint_url}[dprint^] with {markdown_plugin_link}.
 
 link:{root_directory}/.dprint.json[Configuration File^]
+
+.Git hooks
+pre-commit::
+  Use link:{pre_commit_config_file}#:~:text=id%3A%20dprint[
+  local hook^]
+
 
 '''
 
