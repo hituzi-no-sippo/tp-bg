@@ -6,3 +6,5 @@ gomod
 dprint
 actionlint
 reviewdog
+shellcheck
+pyflakes
