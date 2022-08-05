@@ -1,19 +1,28 @@
 = Shell
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.3.0
-:revdate: 2022-07-26T17:36:27+09:00
-:revremark: add linter
+:revnumber: v0.4.0
+:revdate: 2022-08-16T18:00:27+09:00
+:revremark: add GitHub Actions to shell formatter and linter
 :description: Shell
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
 :creation_date: 2022-07-24T16:00:52+09:00
 :github_url: https://github.com
+:root_directory: ../..
+:workflows_directory: {root_directory}/.github/workflows
 
+:github_actions_marketplace_url: {github_url}/marketplace/actions
+:sh_checker_link: link:{github_actions_marketplace_url}/sh-checker[sh-checker^]
 == Formatter
 
 :shfmt_link: link:{github_url}/mvdan/sh[shfmt^]
 Use {shfmt_link}.
+
+:filename: lint-shell.yml
+.GitHub Actions
+* link:{workflows_directory}/{filename}[{filename}^] +
+  Use {sh_checker_link}.
 
 == Linter
 
@@ -22,6 +31,11 @@ Use {shellcheck_link}.
 
 If you want to modify quotes automatically (`+${hoo}+` => `"$hoo"`), use link:{github_url}/anordal/shellharden[
 shellharden^].
+
+:filename: lint-shell.yml
+.GitHub Actions
+* link:{workflows_directory}/{filename}[{filename}^] +
+  Use {sh_checker_link}.
 
 
 '''

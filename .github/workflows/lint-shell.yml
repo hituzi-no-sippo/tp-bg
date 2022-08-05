@@ -1,0 +1,29 @@
+---
+name: Lint shell on push
+
+on:
+  push:
+    paths:
+      - "**.sh"
+      - ".shellcheckrc"
+  pull_request:
+    paths:
+      - "**.sh"
+      - ".shellcheckrc"
+
+jobs:
+  lint:
+    name: Check format with shfmt and lint with shellcheck
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Check format with shfmt and lint with shellcheck
+        uses: luizm/action-sh-checker@v0.5.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          sh_checker_comment: true
