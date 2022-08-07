@@ -1,9 +1,9 @@
 = Natural language
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.8.0
-:revdate: 2022-08-11T12:54:22+09:00
-:revremark: add link to configuration file of spell checker for source code
+:revnumber: v0.9.0
+:revdate: 2022-08-11T12:56:23+09:00
+:revremark: add pre-commit hook for spell checker for source code
 :description: Natural language
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -97,6 +97,12 @@ link:{root_directory}/.typos.toml[Configuration File^]
 * Markdown
 
 For more supported file types, please run `typos --type-list`.
+
+.Git Hooks
+pre-commit::
+  Use link:{pre_commit_config_file}#:~:text=id%3A%20typos[
+  local hook^]
+
 
 .Spell checking scope
 [NOTE]
