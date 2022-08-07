@@ -1,19 +1,22 @@
 = INI
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.2.0
-:revdate: 2022-08-07T16:03:32+09:00
-:revremark: add editorconfig-checker of formatter
+:revnumber: v0.3.0
+:revdate: 2022-08-07T16:18:38+09:00
+:revremark: add link to configuration of formatter
 :description: INI
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
 :creation_date: 2022-08-07T16:00:39+09:00
 :github_url: https://github.com
+:root_directory: ../../..
 
 == Format
 
 :editorconfig_checker_link: link:{github_url}/editorconfig-checker/editorconfig-checker[editorconfig-checker^]
 Use {editorconfig_checker_link}.
+
+link:{root_directory}/.editorconfig[Configuration File^]
 
 
 '''
