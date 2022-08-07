@@ -4,3 +4,5 @@ packages:
     tags:
       - dprint
   - name: editorconfig-checker/editorconfig-checker@2.6.0
+    tags:
+      - editorconfig-checker

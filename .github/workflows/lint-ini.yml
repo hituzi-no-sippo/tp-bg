@@ -1,0 +1,33 @@
+---
+name: Lint INI
+
+on:
+  push:
+    paths:
+      - "**.ini"
+      - ".ecrc"
+  pull_request:
+    paths:
+      - "**.ini"
+      - ".ecrc"
+
+jobs:
+  format:
+    name: Check format
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install formatter
+        uses: aquaproj/aqua-installer@v2.0.2
+        with:
+          aqua_version: v1.30.3
+          aqua_opts: --tags editorconfig-checker
+
+      - name: Add matcher
+        run: echo "::add-matcher::.github/matchers/editorconfig-checker.json"
+
+      - name: Check format
+        run: |
+          find . -type f -name '*.ini' -exec ec -no-color {} +
