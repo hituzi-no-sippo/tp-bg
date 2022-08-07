@@ -59,6 +59,14 @@ repos:
       - id: yamllint
         args: [--strict]
 
+  # INI
+  # Format
+  - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
+    rev: 2.6.2
+    hooks:
+      - id: editorconfig-checker-system
+        files: ^.*\.ini$
+
   # GitHub Actions
   # Lint
   # https://github.com/rhysd/actionlint/blob/main/docs/usage.md#pre-commit
@@ -119,5 +127,6 @@ ci:
     - shellcheck
     - dprint
     - dasel-validate-bin
+    - editorconfig-checker-system
     - actionlint
     - vale
