@@ -1,9 +1,9 @@
 = Template repository
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.16.0
-:revdate: 2022-08-16T18:05:12+09:00
-:revremark: add pre-commit.ci badge
+:revnumber: v0.17.0
+:revdate: 2022-08-16T18:08:00+09:00
+:revremark: add editorconfig-checker of INI formatter
 :description: README for {doctitle}
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -46,6 +46,13 @@ Lint:: {dasel_link}
 [horizontal]
 Format:: {dprint_link} with {prettier_plugin_link}
 Lint:: {yamllint_link}
+
+==== INI
+
+:editorconfig_checker_link: link:{github_url}/editorconfig-checker/editorconfig-checker[editorconfig-checker^]
+[horizontal]
+Format:: {editorconfig_checker_link}
+
 
 === CI
 

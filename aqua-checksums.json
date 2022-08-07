@@ -11,6 +11,11 @@
       "algorithm": "sha512"
     },
     {
+      "id": "github_release/github.com/editorconfig-checker/editorconfig-checker/2.6.0/ec-linux-amd64.tar.gz",
+      "checksum": "9E7CFAFD9B5E4638D08B7BB0D0F936CE59FD7DC6975D5E077201A50CECC9E390C9AF2DDFDE1A3521FC32D5F96DD780D75A1E906D77B6AF72E1124157C8AF29AF",
+      "algorithm": "sha512"
+    },
+    {
       "id": "github_release/github.com/errata-ai/vale/v2.22.0/vale_2.22.0_Linux_64-bit.tar.gz",
       "checksum": "74214B5C468F4D46A09A4DF09E763A4AFD675E4711C25EC817F878D9313085F2",
       "algorithm": "sha256"
