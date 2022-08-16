@@ -1,0 +1,24 @@
+---
+name: Check spell
+
+on: [push, pull_request]
+
+jobs:
+  check:
+    name: Check spell
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install spell checker
+        uses: aquaproj/aqua-installer@v2.0.2
+        with:
+          aqua_version: v1.30.3
+          aqua_opts: --tags typos
+
+      - name: Add matcher
+        run: echo "::add-matcher::.github/matchers/typos.json"
+
+      - name: Check spell
+        run: typos --format brief
