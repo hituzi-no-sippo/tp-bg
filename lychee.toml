@@ -1,1 +1,7 @@
-exclude_path = [".git", "aqua", "node_modules", "package-lock.json"]
+exclude_path = [
+  ".git",
+  "aqua",
+  "node_modules",
+  "package-lock.json",
+  ".vale/styles",
+]
