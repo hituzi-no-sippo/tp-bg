@@ -1,9 +1,9 @@
 = Release
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.4.0
-:revdate: 2023-01-15T21:27:20+09:00
-:revremark: add pre-release version
+:revnumber: v0.5.0
+:revdate: 2023-01-24T22:36:51+09:00
+:revremark: add replacement for issue numbers
 :description: Release
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -35,6 +35,18 @@ will be included into `v1.0.0` tag.
 
 .Reference Configuration
 * {detailed_config_link}
+
+=== Replacement for issue numbers
+
+link:{git_cliff_url}#commit_preprocessors[
+Use `commit_preprocessors`^].
+
+:git_commit_message_example_issues_url: {github_url}/hituzi-no-sippo/git-commit-message-example/issues
+.Examples
+[horizontal]
+`ticket #1`:: `Ticket #1`
+`ticket #1 (#1)`:: `Ticket #1 ([#1]({git_commit_message_example_issues_url}/1))`
+`ticket #1 (close #1)`:: `Ticket #1 (close [#1]({git_commit_message_example_issues_url}/1))`
 
 
 '''
