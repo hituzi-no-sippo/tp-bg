@@ -1,3 +1,14 @@
+exclude = [
+  # For AsciiDoc
+  # Example
+  # `https://github.com/[GitHub]`
+  # `https://help.github.com/articles/about-status-checks/[GitHub Checks^]`
+  '\[.*',
+  # Example
+  # `:repository: hituzi-no-sippo/template-repository`
+  # `https://github.com/{repository}`
+  '%7B.*%7D',
+]
 exclude_path = [
   ".git",
   "aqua",
