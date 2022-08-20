@@ -18,6 +18,9 @@ exclude = [
   # Repository Generate
   # https://github.com/hituzi-no-sippo/template-repository/generate
   "https://github.com/.*/generate",
+
+  # For dprint
+  "https://plugins.dprint.dev/prettier-.*json@",
 ]
 exclude_path = [
   ".git",
