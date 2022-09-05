@@ -1,0 +1,24 @@
+---
+name: Check broken links
+
+on:
+  # yamllint disable-line rule:empty-values
+  push:
+
+jobs:
+  check:
+    name: Check broken links
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      report: ${{ steps.output-report.outputs.report }}
+    env:
+      REPORT_FILE: report.md
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Check broken links
+        uses: ./.github/actions/check-broken-links
+        with:
+          inputs: '"**/*"'
+          output: "${REPORT_FILE}"

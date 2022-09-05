@@ -28,4 +28,5 @@ exclude_path = [
   "node_modules",
   "package-lock.json",
   ".vale/styles",
+  ".lycheecache",
 ]

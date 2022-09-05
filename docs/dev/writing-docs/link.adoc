@@ -1,9 +1,9 @@
 = Link
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.4.0
-:revdate: 2022-09-25T08:21:56+09:00
-:revremark: add git hook to check broken lins
+:revnumber: v0.5.0
+:revdate: 2022-09-25T08:36:45+09:00
+:revremark: add GitHub Action to check broken links on push
 :description: Link
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -11,6 +11,7 @@
 :github_url: https://github.com
 :root_directory: ../../..
 :pre_commit_config_file: {root_directory}/.pre-commit-config.yaml
+:workflows_directory: {root_directory}/.github/workflows
 
 == Checker
 
@@ -24,6 +25,10 @@ link:{root_directory}/lychee.toml[Configuration File^]
 pre-commit::
   Use link:{pre_commit_config_file}#:~:text=id%3A%20lychee[
   local hook^]
+
+:filename: check-broken-links.yml
+.GitHub Actions
+* link:{workflows_directory}/{filename}[{filename}^]
 
 
 '''

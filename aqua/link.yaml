@@ -1,3 +1,5 @@
 ---
 packages:
   - name: lycheeverse/lychee@v0.10.3
+    tags:
+      - lychee
