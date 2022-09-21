@@ -4,6 +4,11 @@ name: Check broken links
 on:
   # yamllint disable-line rule:empty-values
   push:
+  workflow_call:
+    outputs:
+      report:
+        description: lychee report body
+        value: ${{ jobs.check.outputs.report }}
 
 jobs:
   check:
@@ -22,3 +27,19 @@ jobs:
         with:
           inputs: '"**/*"'
           output: "${REPORT_FILE}"
+
+      - name: Output report of lychee
+        if: failure() && github.event_name != 'push'
+        id: output-report
+        # yamllint disable rule:line-length
+        run: |
+          # For multiline strings
+          # https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#multiline-strings
+          delimiter="$(openssl rand -hex 8)"
+          {
+            echo "report<<${delimiter}"
+            cat "${REPORT_FILE}"
+            echo "[Full Github Actions output](https://github.com/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}?check_suite_focus=true)"
+            echo "${delimiter}"
+          } >> "${GITHUB_OUTPUT}"
+        # yamllint enable rule:line-length

@@ -1,9 +1,9 @@
 = Link
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.5.0
-:revdate: 2022-09-25T08:36:45+09:00
-:revremark: add GitHub Action to check broken links on push
+:revnumber: v0.6.0
+:revdate: 2022-09-25T08:39:34+09:00
+:revremark: add GitHub Action to check broken links on pull request
 :description: Link
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -27,8 +27,11 @@ pre-commit::
   local hook^]
 
 :filename: check-broken-links.yml
+:filename-on-pull-request: check-broken-links-on-pull-request.yml
 .GitHub Actions
 * link:{workflows_directory}/{filename}[{filename}^]
+* link:{workflows_directory}/{filename-on-pull-request}[{filename-on-pull-request}^] +
+  Comment the report to pull request if there are broken links.
 
 
 '''
