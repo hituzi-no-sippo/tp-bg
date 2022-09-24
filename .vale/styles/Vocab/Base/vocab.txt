@@ -11,3 +11,4 @@ validator
 msg
 url
 cyclomatic
+asciidoc
