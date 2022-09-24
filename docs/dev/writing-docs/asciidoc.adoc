@@ -1,13 +1,15 @@
 = AsciiDoc
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.2.0
-:revdate: 2022-09-24T15:24:08+09:00
-:revremark: add Asciidoctor of AsciiDoc converter
+:revnumber: v0.3.0
+:revdate: 2022-12-14T18:18:30+09:00
+:revremark: add shell script to lint
 :description: AsciiDoc
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
 :creation_date: 2022-09-24T15:18:16+09:00
+:root_directory: ../../..
+:script_directory: {root_directory}/scripts/docs
 
 == Converter
 
@@ -15,6 +17,35 @@
 Use {asciidoc_converter_link}.
 
 Enable automerge of minor update on Renovate.
+
+:asciidoctor_docs_url: https://docs.asciidoctor.org
+:asciidoc_docs_url: {asciidoctor_docs_url}/asciidoc/latest
+:attributes_docs_url: {asciidoc_docs_url}/attributes
+.Embedded flag
+[NOTE]
+====
+link:{asciidoctor_docs_url}/asciidoctor.js/latest/cli/options/#document-conversion[
+Use `--embedded` flag^].
+
+`--embedded` is used to convert only the body of the HTML.
+Without `--embedded`,
+the header and footer will be added and CSS will also be included.
+
+.References
+:embedded_output_link: link:{asciidoctor_docs_url}/asciidoctor/latest/api/convert-strings/#embedded-output[Embedded output^]
+:embedded_attribute_link: link:{attributes_docs_url}/document-attributes-ref/#intrinsic-attributes[embedded - Intrinsic attributes^]
+* {embedded_output_link}
+* {embedded_attribute_link}
+====
+
+=== Lint
+
+:filename: lint-asciidoc.sh
+Use link:{script_directory}/{filename}[{filename}^] to
+check error and warnings.
+
+It can check for missing attributes because set link:{attributes_docs_url}/unresolved-references[
++attribute-missing=warn@+^].
 
 
 '''

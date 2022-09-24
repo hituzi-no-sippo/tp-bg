@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "lint:md": "markdownlint"
+    "lint:md": "markdownlint",
+    "convert-asciidoc-to-html": "asciidoctor --embedded"
   },
   "devDependencies": {
     "asciidoctor": "^2.2.6",
