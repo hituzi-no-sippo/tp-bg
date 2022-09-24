@@ -1,14 +1,19 @@
 = Link
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.1.0
-:revdate: 2022-09-24T17:45:13+09:00
-:revremark: expand template
+:revnumber: v0.2.0
+:revdate: 2022-09-24T17:55:35+09:00
+:revremark: add lychee of link checker
 :description: Link
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
 :creation_date: 2022-09-24T17:45:13+09:00
 
+== Checker
+
+:link_checker_link: https://lychee.cli.rs[lychee^]
+[horizontal]
+Use {link_checker_link}.
 
 
 '''

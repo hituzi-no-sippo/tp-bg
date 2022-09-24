@@ -36,6 +36,11 @@
       "algorithm": "sha512"
     },
     {
+      "id": "github_release/github.com/lycheeverse/lychee/v0.10.3/lychee-v0.10.3-x86_64-unknown-linux-musl.tar.gz",
+      "checksum": "0B6F17A482DAD0D73D078F34A7CAE92B6B2591C4B581EABD9CAB1CAA612A029C30EB3CE2A323621F5A1C9EE870B3F99AD69A910BBC1F19F87D367AAFC27ED4AD",
+      "algorithm": "sha512"
+    },
+    {
       "id": "github_release/github.com/mvdan/sh/v3.6.0/shfmt_v3.6.0_linux_amd64",
       "checksum": "BF0318A8A2778963584E3B7833662D6D00086E2EB234B838B52BDA37F81BCE1BB4408C20C9DB82B74E49FDDABD74642C2FD125E908B6428B1E107BF9F9F65696",
       "algorithm": "sha512"
