@@ -1,9 +1,9 @@
 = Link
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.6.0
-:revdate: 2022-09-25T08:39:34+09:00
-:revremark: add GitHub Action to check broken links on pull request
+:revnumber: v0.7.0
+:revdate: 2022-09-25T09:09:15+09:00
+:revremark: add GitHub Action to create or update issue for check broken links
 :description: Link
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -28,10 +28,22 @@ pre-commit::
 
 :filename: check-broken-links.yml
 :filename-on-pull-request: check-broken-links-on-pull-request.yml
+:filename-for-issue: create-or-update-issue-for-broken-links.yml
 .GitHub Actions
 * link:{workflows_directory}/{filename}[{filename}^]
 * link:{workflows_directory}/{filename-on-pull-request}[{filename-on-pull-request}^] +
   Comment the report to pull request if there are broken links.
+* link:{workflows_directory}/{filename-for-issue}[{filename-for-issue}^] +
+  Create or update a issue if there are broken links. +
+  Run workflow at 00:00 (UTC) every day.
++
+--
+.Labels of issue to create
+* documentation
+* good first issue
+* report
+* automated issue
+--
 
 
 '''
