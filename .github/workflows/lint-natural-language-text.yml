@@ -1,0 +1,52 @@
+---
+name: Lint natural language text
+
+on:
+  push:
+    paths:
+      - "README.*"
+      - "docs/**"
+  pull_request:
+    paths:
+      - "README.*"
+      - "docs/**"
+
+jobs:
+  lint:
+    name: Lint
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run natural language text with reviewdog
+        uses: errata-ai/vale-action@v2
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        with:
+          filter_mode: file
+          # When there are errors;
+          # push :: failure
+          # pull request:: success
+          #
+          # When there are no errors and there are warnings and suggestions;
+          # push :: success
+          # pull request:: success
+          #
+          # Want to failure of step only when there are errors.
+          # Does not want to failure of step
+          # when there are warnings and suggestions.
+          # But failure of step when there are no errors,
+          # there are warnings or suggestions,
+          # and `reporter` is `github-pr-review`.
+          # At this time, I want to make success of step.
+          # When `reporter` is `github-pr-review`,
+          # set `false` to `fail_on_error` so that is success of step.
+          # When `fail_on_error` is `false`,
+          # this step succeeds even if there is an error.
+          # yamllint disable rule:line-length
+          fail_on_error: ${{ (github.event_name == 'pull_request' && 'false') || 'true' }}
+          reporter: ${{ (github.event_name == 'pull_request' && 'github-pr-review') || 'github-check' }}
+          # yamllint enable rule:line-length
