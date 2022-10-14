@@ -12,3 +12,4 @@ shfmt
 shellcheck
 shellharden
 [Dd]asel
+yamllint
