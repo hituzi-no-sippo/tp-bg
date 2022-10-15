@@ -1,0 +1,25 @@
+---
+name: Lint Git Commit Message
+
+on: [push, pull_request]
+
+jobs:
+  conventional-commits:
+    name: Check Conventional Commit Compliance with Cocogitto
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          # Get the full git history.
+          # https://docs.cocogitto.io/ci_cd/#conventional-commits-check
+          fetch-depth: 0
+
+      - name: Install linter
+        uses: aquaproj/aqua-installer@v2.0.2
+        with:
+          aqua_version: v1.30.3
+          aqua_opts: --tags cocogitto
+
+      - name: Conventional Commit Check with Cocogitto
+        run: cog check

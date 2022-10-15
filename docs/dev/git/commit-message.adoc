@@ -1,9 +1,9 @@
 = Git commit message
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.4.0
-:revdate: 2022-10-15T13:27:01+09:00
-:revremark: add commit-msg hook for lint
+:revnumber: v0.5.0
+:revdate: 2022-07-11T20:58:35+09:00
+:revremark: add GitHub Actions
 :description: Git commit message tools
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -36,6 +36,11 @@ This is because set `ignore_merge_commits = true` in the configuration file^].
 commit-msg::
   Use link:{pre_commit_config_file}#:~:text=repo%3A%20https%3A%2F/github.com/hituzi%2Dno%2Dsippo/pre%2Dcommit%2Dhooks%2Dwith%2Dcocogitto[
   pre-commit^] ({pre_commit_with_cocogitto_link})
+
+=== GitHub Actions
+
+:filename: lint-git-commit-message.yml
+link:{root_directory}/.github/workflows/{filename}[{filename}^]
 
 
 '''
