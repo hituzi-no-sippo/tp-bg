@@ -1,9 +1,9 @@
 = Template repository
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.18.0
-:revdate: 2022-08-16T18:06:11+09:00
-:revremark: add taplo of TOML formatter & linter
+:revnumber: v0.19.0
+:revdate: 2022-08-16T18:06:22+09:00
+:revremark: add cocogitto of git commit message linter
 :description: README for {doctitle}
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -81,6 +81,16 @@ window=_blank]
 Lint:: {actionlint_link}
 
 
+=== Git
+
+:cocogitto_link: link:https://docs.cocogitto.io[Cocogitto^]
+==== Commit message
+
+:conventional_commits_link: link:https://www.conventionalcommits.org[Conventional Commits^]
+[horizontal]
+Lint:: {cocogitto_link} ({conventional_commits_link})
+
+
 === Writing docs
 
 ==== Natural language
@@ -147,6 +157,8 @@ See `docs/dev` for more details.
 . Install GitHub Apps
 * link:{github_marketplace_url}/pre-commit-ci[
   pre-commit ci^]
+* link:{github_url}/apps/cocogitto-bot[
+  Cocogitto-bot^]
 
 
 '''

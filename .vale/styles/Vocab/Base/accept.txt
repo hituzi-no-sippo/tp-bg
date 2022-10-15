@@ -14,3 +14,4 @@ shellharden
 [Dd]asel
 yamllint
 [Tt]aplo
+[Cc]ocogitto
