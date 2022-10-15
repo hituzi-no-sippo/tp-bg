@@ -1,15 +1,16 @@
 = GitHub Actions
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.3.0
-:revdate: 2022-07-25T20:22:56+09:00
-:revremark: add reviewdog to lint GitHub Actions with reviewdog
+:revnumber: v0.4.0
+:revdate: 2022-08-06T10:21:41+09:00
+:revremark: add git hook to lint
 :description: GitHub Actions
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
 :creation_date: 2022-07-24T13:30:44+09:00
 :github_url: https://github.com
 :root_directory: ../../..
+:pre_commit_config_file: {root_directory}/.pre-commit-config.yaml
 :workflows_directory: {root_directory}/.github/workflows
 
 == Lint
@@ -17,6 +18,12 @@
 :actionlint_url: {github_url}/rhysd/actionlint
 :actionlint_link: link:{actionlint_url}[actionlint^]
 Use {actionlint_link}.
+
+:pre_commit_to_lint_link: {actionlint_url}/blob/main/docs/usage.md#pre-commit[actionlint pre-commit^]
+.Git Hooks
+pre-commit::
+  Use link:{pre_commit_config_file}#:~:text=repo%3A%20https%3A%2F/github.com/rhysd/actionlint.git[
+  pre-commit^] ({pre_commit_to_lint_link})
 
 :filename: lint-github-actions.yml
 :github_actions_marketplace_url: {github_url}/marketplace/actions
