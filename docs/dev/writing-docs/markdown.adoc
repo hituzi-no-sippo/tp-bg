@@ -1,9 +1,9 @@
 = Markdown
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.7.0
-:revdate: 2022-10-17T14:55:27+09:00
-:revremark: add link to configuration of ignore for markdown linter
+:revnumber: v0.8.0
+:revdate: 2022-10-18T14:59:50+09:00
+:revremark: add link to configuration of rules for markdown linter
 :description: Markdown
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -37,6 +37,7 @@ pre-commit::
 Use {markdownlint_cli_link}.
 
 .Configuration Files
+* link:{root_directory}/.markdownlint.yml[Rules^]
 * link:{root_directory}/.markdownlintignore[Ignore file list^]
 
 Enable automerge of minor update on Renovate.
