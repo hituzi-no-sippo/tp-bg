@@ -27,6 +27,11 @@ function generate_CHANGEROG() {
 function format() {
 	dprint check CHANGELOG.md
 }
+function lint() {
+	npm run lint:md -- \
+		--disable line-length -- \
+		CHANGELOG.md
+}
 
 exits_backup=false
 
@@ -40,7 +45,7 @@ readonly exits_backup
 
 set +o errexit
 
-generate_CHANGEROG && format
+generate_CHANGEROG && format && lint
 
 result="$?"
 
