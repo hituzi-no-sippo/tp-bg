@@ -1,9 +1,9 @@
 = Release
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.14.0
-:revdate: 2022-08-07T14:02:46+09:00
-:revremark: add pre-commit hook to lint generated CHANGELOG
+:revnumber: v0.15.0
+:revdate: 2022-08-07T14:03:42+09:00
+:revremark: add GitHub Action to lint generated CHANGELOG
 :description: Release
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -326,6 +326,10 @@ with git-cliff^].
 pre-commit::
   Use link:{pre_commit_config_file}#:~:text=id%3A%20lint%2Dgenerated%2DCHANGELOG%2Dwith%2Dmarkdown%2Dlinter[
   local hook^]
+
+:filename: lint-generated-CHANGELOG.yml
+.GitHub Actions
+* link:{workflows_directory}/{filename}[{filename}^]
 
 
 == Release note
