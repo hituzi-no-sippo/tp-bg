@@ -48,8 +48,18 @@ function format() {
 	function run_dprint() {
 		dprint fmt "$TEMP_FILE"
 	}
+	function run_markdownlint() {
+		npm run lint:md -- \
+			--fix \
+			--disable \
+			headings \
+			no-bare-urls \
+			line-length \
+			-- \
+			"$TEMP_FILE"
+	}
 
-	run_dprint
+	run_dprint && run_markdownlint
 }
 
 extract_commit_msg_to_temp_file
