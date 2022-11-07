@@ -2,8 +2,8 @@
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
 :revnumber: v0.8.0
-:revdate: 2022-11-08T13:58:30+09:00
-:revremark: add markdownlint to format tools
+:revdate: 2022-11-08T14:07:39+09:00
+:revremark: add commit-msg hook to format
 :description: Git commit message tools
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -61,6 +61,12 @@ Run `bash {format_commit_msg_path}` to format commit message^].
 :markdownlint_cli_link: link:{github_url}/igorshubovych/markdownlint-cli[markdownlint-cli^]
 * {dprint_link} with {markdown_plugin_link}
 * {markdownlint_cli_link}
+
+=== Git hooks
+
+commit-msg::
+  Use link:{pre_commit_config_file}#:~:text=id%3A%20format%2Dcommit%2Dmsg[
+  Format commit message (local hook)^]
 
 
 '''
