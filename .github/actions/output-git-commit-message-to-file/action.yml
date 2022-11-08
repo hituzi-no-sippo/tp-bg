@@ -1,0 +1,21 @@
+---
+name: Output git commit message to file
+description: Output git commit message to file
+
+inputs:
+  file:
+    description: git commit message file
+    required: false
+    default: log.txt
+
+runs:
+  using: composite
+  steps:
+    - name: Output git commit message to file
+      shell: bash
+      run: |
+        revision_range=$([[ "$GITHUB_EVENT_NAME" == 'pull_request' ]] && \
+          echo "origin/$GITHUB_BASE_REF...origin/$GITHUB_HEAD_REF" || \
+          echo $(git rev-parse "$GITHUB_REF_NAME"^)...HEAD \
+        )
+        git log --pretty=format:"%B" "$revision_range" > ${{ inputs.file }}
