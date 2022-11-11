@@ -1,9 +1,9 @@
 = Git commit message
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.10.0
-:revdate: 2022-11-11T15:51:27+09:00
-:revremark: add natural language
+:revnumber: v0.11.0
+:revdate: 2022-11-11T15:54:07+09:00
+:revremark: add commit-msg hook to lint natural language text
 :description: Git commit message tools
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -81,6 +81,12 @@ Run `bash {lint_natural_language_text_path}` to
 lint natural language text of commit message^].
 
 Use link:https://vale.sh[Vale^].
+
+=== Git hooks
+
+commit-msg::
+  Using link:{pre_commit_config_file}#:~:text=id%3A%20lint%2Dnatural%2Dlanguage%2Dtext%2Dof%2Dcommit%2Dmsg[
+  Lint natural language text of commit message(local hook)^]
 
 
 '''
