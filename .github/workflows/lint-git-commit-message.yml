@@ -49,3 +49,27 @@ jobs:
 
       - name: Check for formatting changes
         run: git diff --ignore-cr-at-eol --exit-code log.md
+
+  natural-language-text:
+    name: Lint natural language text
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Output git commit message to file
+        uses: ./.github/actions/output-git-commit-message-to-file
+
+      - name: Install linter
+        uses: aquaproj/aqua-installer@v2.0.2
+        with:
+          aqua_version: v1.30.4
+          aqua_opts: --tags vale
+
+      - name: Download and install external configuration sources for linter
+        run: vale sync
+
+      - name: Run natural language texts
+        run: < log.txt vale
