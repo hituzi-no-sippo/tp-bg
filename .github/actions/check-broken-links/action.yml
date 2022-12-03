@@ -6,6 +6,9 @@ inputs:
   inputs:
     description: Lychee inputs
     required: true
+  save-cache:
+    description: Whether to save the lychee's cache
+    required: true
   output:
     description: Output markdown file path
     required: false
@@ -26,7 +29,8 @@ runs:
       shell: bash
 
     - name: Restore lychee cache
-      uses: actions/cache@v3.2.3
+      uses: actions/cache/restore@v3.2.3
+      id: cache-restore
       with:
         path: .lycheecache
         key: lychee-cache-${{ hashFiles('link_list') }}
@@ -61,3 +65,14 @@ runs:
       if: always()
       run: cat "${{ inputs.output }}" > "${GITHUB_STEP_SUMMARY}"
       shell: bash
+
+    - name: Save lychee cache
+      uses: actions/cache/save@v3.2.3
+      # Composite action boolean inputs are actually strings
+      # https://github.com/actions/runner/issues/1483#issuecomment-1042393939
+      if: |
+        inputs.save-cache == 'true' &&
+          steps.cache-restore.outputs.cache-hit == false
+      with:
+        path: .lycheecache
+        key: lychee-cache-${{ hashFiles('link_list') }}

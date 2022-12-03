@@ -1,9 +1,9 @@
 = Git commit message
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.14.0
-:revdate: 2022-12-03T16:29:11+09:00
-:revremark: add commit-msg hook to check broken links
+:revnumber: v0.15.0
+:revdate: 2022-12-03T16:55:41+09:00
+:revremark: add GitHub Action to check broken links
 :description: Git commit message tools
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -107,6 +107,10 @@ Use link:https://lychee.cli.rs[Lychee^].
 commit-msg::
   Use link:{pre_commit_config_file}#:~:text=id%3A%20check%2Dbroken%2Dlinks%2D%2Dof%2Dcommit%2Dmsg[
   check broken links of commit message(local hook)^]
+
+=== GitHub Actions
+
+link:{root_directory}/.github/workflows/{filename}[{filename}^]
 
 
 '''

@@ -26,6 +26,7 @@ jobs:
         uses: ./.github/actions/check-broken-links
         with:
           inputs: '"**/*"'
+          save-cache: true
           output: "${REPORT_FILE}"
 
       - name: Output report of lychee

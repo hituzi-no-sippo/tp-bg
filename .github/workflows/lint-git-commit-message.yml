@@ -73,3 +73,21 @@ jobs:
 
       - name: Run natural language texts
         run: < log.txt vale
+
+  link:
+    name: Check broken links
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Output git commit message to file
+        uses: ./.github/actions/output-git-commit-message-to-file
+
+      - name: Check broken links
+        uses: ./.github/actions/check-broken-links
+        with:
+          inputs: log.txt
+          save-cache: false
