@@ -1,14 +1,26 @@
 = Code Complexity
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.1.0
-:revdate: 2022-12-06T17:56:45+09:00
-:revremark: expand template
+:revnumber: v0.2.0
+:revdate: 2022-12-06T18:44:20+09:00
+:revremark: add description of lizard
 :description: Code Complexity
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
 :creation_date: 2022-12-06T17:56:45+09:00
 
+:lizard_url: https://github.com/terryyin/lizard
+:lizard_link: link:{lizard_url}[lizard^]
+== lizard
+
+.Supported Languages
+* C/C++ (works with C++14)
+* JavaScript (With ES6 and JSX) / TypeScript
+* Python
+* Golang
+* Rust
+
+link:{lizard_url}[This tool also support other than the above^].
 
 
 '''
