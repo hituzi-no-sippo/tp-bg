@@ -7,3 +7,6 @@ declaratively
 ci
 mergeability
 perf
+validator
+msg
+url
