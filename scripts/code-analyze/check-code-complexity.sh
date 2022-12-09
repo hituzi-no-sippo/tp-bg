@@ -12,4 +12,5 @@ lizard \
 	--Threshold parameter_count=5 \
 	--Threshold token_count=100 \
 	-ENS --Threshold max_nested_structures=3 \
+	--warnings_only \
 	"$@"
