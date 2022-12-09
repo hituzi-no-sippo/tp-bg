@@ -1,15 +1,16 @@
 = Code Complexity
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.3.0
-:revdate: 2022-12-08T17:03:00+09:00
-:revremark: add check fields and limit
+:revnumber: v0.4.0
+:revdate: 2022-12-09T14:45:06+09:00
+:revremark: add pre-commit hook to check code complexity
 :description: Code Complexity
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
 :creation_date: 2022-12-06T17:56:45+09:00
 :root_directory: ../../..
 :script_directory: {root_directory}/scripts/code-analyze
+:pre_commit_config_file: {root_directory}/.pre-commit-config.yaml
 
 :lizard_url: https://github.com/terryyin/lizard
 :lizard_link: link:{lizard_url}[lizard^]
@@ -37,6 +38,11 @@ The limit is one function unit.
 
 link:{script_directory}/check-code-complexity.sh[
 Setting shell script^]
+
+.Git hooks
+pre-commit::
+  Use link:{pre_commit_config_file}#:~:text=id%3A%20check%2Dcode%2Dcomplexity[
+  local hook^].
 
 
 '''
