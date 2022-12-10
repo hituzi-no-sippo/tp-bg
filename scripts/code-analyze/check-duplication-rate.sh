@@ -10,7 +10,12 @@ function calc_duplication_rate() {
 	# Hide the result of the code complexity analysis
 	lizard \
 		-Eduplicate \
-		--warnings_only
+		--warnings_only \
+		--exclude "./.git/*" \
+		--exclude "./node_modules/*" \
+		--exclude "./.git-cliff/*" \
+		--exclude "./.vale/*" \
+		--exclude "./docs/*"
 }
 
 calc_duplication_rate
