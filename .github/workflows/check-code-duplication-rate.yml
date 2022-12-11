@@ -1,0 +1,37 @@
+---
+name: Check code duplication rate
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  check:
+    name: Check code duplication rate
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+      - name: Setup lizard
+        run: python -m pip install lizard
+
+      - name: Check code duplication rate
+        run: |
+          bash scripts/code-analyze/check-duplication-rate.sh \
+            --duplicate 0 --unique 100 \
+            > report.txt
+      - name: Output report
+        if: ${{ failure() && github.event_name == 'pull_request' }}
+        run: |
+          gh pr review \
+            --body-file report.txt \
+            --comment ${{ github.event.pull_request.html_url }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
