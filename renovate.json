@@ -91,6 +91,17 @@
       "addLabels": [
         "markdown"
       ]
+    },
+    {
+      "matchPackageNames": [
+        "asciidoctor"
+      ],
+      "matchManagers": [
+        "npm"
+      ],
+      "minor": {
+        "automerge": true
+      }
     }
   ]
 }

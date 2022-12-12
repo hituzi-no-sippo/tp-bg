@@ -57,6 +57,15 @@ function __setup_markdown_tools() {
 
 	__setup_linter
 }
+function __setup_asciidoc_tools() {
+	info "Setup AsciiDoc tools"
+
+	function __setup_converter() {
+		npm install
+	}
+
+	__setup_converter
+}
 
 function setup() {
 	info "Setup Start"
@@ -68,6 +77,7 @@ function setup() {
 	__setup_git_hooks
 	__setup_code_analyzer
 	__setup_markdown_tools
+	__setup_asciidoc_tools
 
 	info "Setup Complete"
 }

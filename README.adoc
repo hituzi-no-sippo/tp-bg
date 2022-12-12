@@ -1,9 +1,9 @@
 = Template repository
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.30.0
-:revdate: 2023-01-22T14:48:10+09:00
-:revremark: add TODO
+:revnumber: v0.31.0
+:revdate: 2022-12-12T13:37:19+09:00
+:revremark: add Asciidoctor of AsciiDoc converter
 :description: README for {doctitle}
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -132,6 +132,12 @@ Asciidoctor^] is required to lint an AsciiDoc file.
 [horizontal]
 Format:: {dprint_link} with {markdown_plugin_link}
 Lint:: {markdownlint_cli_link}
+
+==== AsciiDoc
+
+:asciidoctor_link: link:https://asciidoctor.org/[Asciidoctor^]
+[horizontal]
+Converter:: {asciidoctor_link}
 
 ==== Release
 

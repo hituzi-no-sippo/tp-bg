@@ -1,14 +1,20 @@
 = AsciiDoc
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.1.0
-:revdate: 2022-09-24T15:18:16+09:00
-:revremark: expand template
+:revnumber: v0.2.0
+:revdate: 2022-09-24T15:24:08+09:00
+:revremark: add Asciidoctor of AsciiDoc converter
 :description: AsciiDoc
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
 :creation_date: 2022-09-24T15:18:16+09:00
 
+== Converter
+
+:asciidoc_converter_link: link:https://asciidoctor.org/[Asciidoctor^]
+Use {asciidoc_converter_link}.
+
+Enable automerge of minor update on Renovate.
 
 
 '''
