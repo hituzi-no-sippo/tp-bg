@@ -1,15 +1,16 @@
 = AsciiDoc
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.3.0
-:revdate: 2022-12-14T18:18:30+09:00
-:revremark: add shell script to lint
+:revnumber: v0.4.0
+:revdate: 2022-12-14T18:22:44+09:00
+:revremark: add pre-commit to lint
 :description: AsciiDoc
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
 :creation_date: 2022-09-24T15:18:16+09:00
 :root_directory: ../../..
 :script_directory: {root_directory}/scripts/docs
+:pre_commit_config_file: {root_directory}/.pre-commit-config.yaml
 
 == Converter
 
@@ -46,6 +47,11 @@ check error and warnings.
 
 It can check for missing attributes because set link:{attributes_docs_url}/unresolved-references[
 +attribute-missing=warn@+^].
+
+.Git hooks
+commit-msg::
+  Use link:{pre_commit_config_file}#:~:text=id%3A%20lint%2Dasciidoc[
+  local hook^]
 
 
 '''

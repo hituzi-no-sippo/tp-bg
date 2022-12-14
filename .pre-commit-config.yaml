@@ -163,6 +163,16 @@ repos:
     hooks:
       - id: markdownlint-fix
 
+  # AsciiDoc
+  - repo: local
+    hooks:
+      - id: lint-asciidoc
+        name: Lint AsciiDoc with Asciidoctor
+        language: script
+        entry: scripts/docs/lint-asciidoc.sh
+        types:
+          - asciidoc
+
   # Commit message
   # Lint
   # Conventional Commits
@@ -287,6 +297,7 @@ ci:
     - check-code-duplication-rate
     - actionlint
     - gitleaks
+    - lint-asciidoc
     - vale
     - typos
     - format-commit-msg
