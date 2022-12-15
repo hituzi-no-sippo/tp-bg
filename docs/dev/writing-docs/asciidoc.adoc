@@ -1,9 +1,9 @@
 = AsciiDoc
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.5.0
-:revdate: 2022-12-15T16:58:06+09:00
-:revremark: add GitHub Action to lint
+:revnumber: v0.6.0
+:revdate: 2022-12-15T21:55:44+09:00
+:revremark: add shell script to check broken links
 :description: AsciiDoc
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -57,6 +57,11 @@ commit-msg::
 :filename: lint-asciidoc.yml
 .GitHub Actions
 * link:{workflows_directory}/{filename}[{filename}^]
+
+=== Link
+
+:filename: check-broken-links-for-asciidoc.sh
+Use link:{script_directory}/{filename}[{filename}^] to check broken links.
 
 
 '''
