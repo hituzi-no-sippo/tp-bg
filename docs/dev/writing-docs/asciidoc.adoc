@@ -1,9 +1,9 @@
 = AsciiDoc
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.7.0
-:revdate: 2022-12-15T21:56:52+09:00
-:revremark: add pre-commit hook to check broken links
+:revnumber: v0.8.0
+:revdate: 2022-12-15T21:58:06+09:00
+:revremark: add GitHub Action to check broken links
 :description: AsciiDoc
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -67,6 +67,10 @@ Use link:{script_directory}/{filename}[{filename}^] to check broken links.
 commit-msg::
   Use link:{pre_commit_config_file}#:~:text=id%3A%20check%2Dbroken%2Dlinks%2Dfor%2Dasciidoc[
   local hook^]
+
+:filename: check-broken-links.yml
+.GitHub Actions
+* link:{workflows_directory}/{filename}[{filename}^]
 
 
 '''

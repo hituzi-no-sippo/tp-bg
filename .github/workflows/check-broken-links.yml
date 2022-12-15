@@ -22,6 +22,18 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: package.json
+          cache: npm
+      - name: Install a converter to convert AsciiDoc to HTML.
+        run: npm ci
+      - name: Convert AsciiDoc to HTML
+        run: |
+          find . -type f -name '*.adoc' \
+            -exec npm run convert-asciidoc-to-html -- --verbose {} +
+
       - name: Check broken links
         uses: ./.github/actions/check-broken-links
         with:
