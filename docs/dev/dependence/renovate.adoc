@@ -1,13 +1,55 @@
 = Renovate
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.1.0
-:revdate: 2022-12-17T14:09:55+09:00
-:revremark: expand template
+:revnumber: v0.2.0
+:revdate: 2022-12-29T11:16:40+09:00
+:revremark: add overview
 :description: Renovate
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
 :creation_date: 2022-12-17T12:17:56+09:00
+:renovate_doc_url: https://docs.renovatebot.com
+
+link:{renovate_doc_url}[
+Renovate^] is automated dependency updater.
+
+:config_options_url: {renovate_doc_url}/configuration-options
+:module_manager_url: {renovate_doc_url}/modules/manager
+:supported_managers_url: {module_manager_url}/#supported-managers
+:github_docs_url: https://docs.github.com/en
+== Why not use dependabot?
+
+* Automerge works with one setting
+** link:{config_options_url}/#automerge[
+   Set `true` to `automerge` option^]
+** link:{renovate_doc_url}/key-concepts/automerge/[
+   Automerge configuration and troubleshooting^]
+* Many managers are supported
+** link:{supported_managers_url}[Renovate^]
+** link:{github_docs_url}/code-security/dependabot/dependabot-version-updates/about-dependabot-version-updates#supported-repositories-and-ecosystems[
+   Dependabot^]
+* Multiple package updates can be combined into single PR
+** link:{renovate_doc_url}/noise-reduction/#package-grouping[
+   Package Grouping^]
+** link:{config_options_url}/#groupname[
+   `groupName`^]
+** link:{config_options_url}/#packagerules[
+   `packageRules`^]
+
+== Supported Managers
+
+* link:{module_manager_url}/github-actions/[
+  GitHub Actions^]
+* link:{module_manager_url}/npm/[
+  npm^]
+* link:{module_manager_url}/dockerfile/[
+  dockerfile^]
+* link:{module_manager_url}/gomod/[
+  gomod^]
+* link:{module_manager_url}/cargo/[
+  cargo^]
+
+See link:{supported_managers_url}[Supported Managers^] for more details.
 
 
 '''
