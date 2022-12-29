@@ -1,14 +1,16 @@
 = Renovate
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.3.0
-:revdate: 2022-12-29T12:21:10+09:00
-:revremark: add configuration
+:revnumber: v0.4.0
+:revdate: 2022-12-29T12:54:13+09:00
+:revremark: add setup
 :description: Renovate
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
 :creation_date: 2022-12-17T12:17:56+09:00
 :root_directory: ../../..
+:github_url: https://github.com
+:github_marketplace_url: {github_url}/marketplace
 :renovate_doc_url: https://docs.renovatebot.com
 
 link:{renovate_doc_url}[
@@ -102,6 +104,26 @@ Maximum number of PRs created per hour (`prHourlyLimit`)::
 ** `branchConcurrentLimit`
 
 See link:{renovate_doc_url}/noise-reduction/[Noisy Reduction^]
+====
+
+== Setup
+
+Install {github_marketplace_url}/renovate[Renovate^] of GitHub App.
+
+See link:{github_url}/renovatebot/tutorial[tutorial^] for more details.
+
+[CAUTION]
+.Need to install Renovate Approve
+====
+If link:{github_docs_url}/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule#:~:text=be%20merged%2C%20select-,Require%20approvals,-%2C%20click%20the%20Required[
+`Require approvals` is enable of branch protection rule^],
+need to install approve apps.
+
+:renovate_approve_url: {github_url}/apps/renovate-approve
+.Approve apps
+* link:{renovate_approve_url}[Renovate Approve^]
+* link:{renovate_approve_url}-2[Renovate Approve 2^] +
+  If minimum 2 PR reviewers.
 ====
 
 
