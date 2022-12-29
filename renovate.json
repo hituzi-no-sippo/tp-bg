@@ -1,0 +1,25 @@
+{
+  "extends": [
+    ":ignoreModulesAndTests",
+    ":semanticPrefixFixDepsChoreOthers",
+    "group:monorepos",
+    "group:recommended",
+    "workarounds:all"
+  ],
+  "patch": {
+    "automerge": true
+  },
+  "platformAutomerge": true,
+  "labels": [
+    "dependencies"
+  ],
+  "rangeStrategy": "auto",
+  "dependencyDashboard": true,
+  "dependencyDashboardAutoclose": true,
+  "dependencyDashboardLabels": [
+    "dependencies",
+    "automated issue"
+  ],
+  "semanticCommits": "enabled",
+  "configMigration": true
+}
