@@ -1,9 +1,9 @@
 = Template repository
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.26.0
-:revdate: 2022-09-24T17:49:40+09:00
-:revremark: add lychee of link checker
+:revnumber: v0.27.0
+:revdate: 2022-12-31T13:09:33+09:00
+:revremark: add Gitleaks of detecting hardcoded secrets tool
 :description: README for {doctitle}
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -90,6 +90,11 @@ Lint:: {actionlint_link}
 [horizontal]
 Lint:: {cocogitto_link} ({conventional_commits_link})
 
+=== Security
+
+:gitleaks_link: link:https://gitleaks.io[Gitleaks^]
+[horizontal]
+Detecting hardcoded secrets tool:: {gitleaks_link}
 
 === Writing docs
 
