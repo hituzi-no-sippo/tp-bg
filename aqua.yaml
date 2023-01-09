@@ -1,0 +1,13 @@
+---
+# aqua - Declarative CLI Version Manager
+# https://aquaproj.github.io/
+checksum:
+  # https://aquaproj.github.io/docs/reference/checksum/
+  enabled: true
+  supported_envs:
+    - linux/amd64
+registries:
+  - type: standard
+    # yamllint disable-line rule:comments
+    ref: v3.120.0 # renovate: depName=aquaproj/aqua-registry
+packages:
