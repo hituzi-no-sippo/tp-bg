@@ -1,0 +1,17 @@
+= Tool Version Manager
+:author: hituzi no sippo
+:email: dev@hituzi-no-sippo.me
+:revnumber: v0.1.0
+:revdate: 2023-01-09T12:43:27+09:00
+:revremark: expand template
+:description: Version Manager
+:copyright: Copyright (C) 2023 {author}
+// Custom Attributes
+:creation_date: 2023-01-09T12:43:27+09:00
+
+
+
+'''
+
+:author_link: link:https://github.com/hituzi-no-sippo[{author}^]
+Copyright (C) 2023 {author_link}
