@@ -1,9 +1,9 @@
 = Template repository
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.14.0
-:revdate: 2022-08-16T18:04:47+09:00
-:revremark: add yamllint of YAML linter
+:revnumber: v0.15.0
+:revdate: 2022-08-16T18:05:01+09:00
+:revremark: add pre-commit of git hooks manager
 :description: README for {doctitle}
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -48,6 +48,12 @@ Format:: {dprint_link} with {prettier_plugin_link}
 Lint:: {yamllint_link}
 
 === CI
+
+==== Git hooks
+
+:pre_commit_link: link:https://pre-commit.com/[pre-commit^]
+[horizontal]
+Manage:: {pre_commit_link}
 
 ==== GitHub Actions
 
