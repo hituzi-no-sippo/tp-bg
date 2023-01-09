@@ -1,14 +1,33 @@
 = Template repository
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.2.0
-:revdate: 2022-07-21T18:28:52+09:00
-:revremark: Add MIT-0 LICENSE
+:revnumber: v0.3.0
+:revdate: 2022-07-25T16:35:19+09:00
+:revremark: Add Introduction
 :description: README for {doctitle}
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
 :creation_date: 2022-07-21T18:20:39+09:00
+:owner_name: hituzi-no-sippo
+:repository_name: template-repository
+:repository: {owner_name}/{repository_name}
+:github_url: https://github.com
+:repository_url: {github_url}/{repository}
 
+== Supported Platforms
+
+- [x] Linux
+- [ ] macOS
+- [ ] Windows
+
+== Introduction
+
+.Setup
+. Create repository with this template
+* `gh repo create <REPOSITORY_NAME> --public --template {repository}`
+* link:{repository_url}/generate[Use this template^]
+. Clone repository +
+  `gh repo clone <REPOSITORY_NAME> && cd <REPOSITORY_NAME>`
 
 
 '''
