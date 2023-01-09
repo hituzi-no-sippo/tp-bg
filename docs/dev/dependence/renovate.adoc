@@ -1,0 +1,139 @@
+= Renovate
+:author: hituzi no sippo
+:email: dev@hituzi-no-sippo.me
+:revnumber: v0.5.0
+:revdate: 2022-12-29T13:44:34+09:00
+:revremark: add GitHub Action to reenable automerge action
+:description: Renovate
+:copyright: Copyright (C) 2022 {author}
+// Custom Attributes
+:creation_date: 2022-12-17T12:17:56+09:00
+:root_directory: ../../..
+:workflows_directory: {root_directory}/.github/workflows
+:github_url: https://github.com
+:github_marketplace_url: {github_url}/marketplace
+:renovate_doc_url: https://docs.renovatebot.com
+
+link:{renovate_doc_url}[
+Renovate^] is automated dependency updater.
+
+:config_options_url: {renovate_doc_url}/configuration-options
+:module_manager_url: {renovate_doc_url}/modules/manager
+:supported_managers_url: {module_manager_url}/#supported-managers
+:github_docs_url: https://docs.github.com/en
+== Why not use dependabot?
+
+* Automerge works with one setting
+** link:{config_options_url}/#automerge[
+   Set `true` to `automerge` option^]
+** link:{renovate_doc_url}/key-concepts/automerge/[
+   Automerge configuration and troubleshooting^]
+* Many managers are supported
+** link:{supported_managers_url}[Renovate^]
+** link:{github_docs_url}/code-security/dependabot/dependabot-version-updates/about-dependabot-version-updates#supported-repositories-and-ecosystems[
+   Dependabot^]
+* Multiple package updates can be combined into single PR
+** link:{renovate_doc_url}/noise-reduction/#package-grouping[
+   Package Grouping^]
+** link:{config_options_url}/#groupname[
+   `groupName`^]
+** link:{config_options_url}/#packagerules[
+   `packageRules`^]
+
+== Supported Managers
+
+* link:{module_manager_url}/github-actions/[
+  GitHub Actions^]
+* link:{module_manager_url}/npm/[
+  npm^]
+* link:{module_manager_url}/dockerfile/[
+  dockerfile^]
+* link:{module_manager_url}/gomod/[
+  gomod^]
+* link:{module_manager_url}/cargo/[
+  cargo^]
+
+See link:{supported_managers_url}[Supported Managers^] for more details.
+
+== Configuration
+
+.Configuration File
+link:{root_directory}/renovate.json[renovate.json^]
+
+.Automerge
+[horizontal]
+Major(`1.0.0` => `2.0.0`):: disable
+Minor(`1.0.0` => `1.1.0`):: disable
+Patch(`1.0.0` => `1.0.1`):: Enable
+
+.Schedule
+[horizontal]
+Create branch (`schedule`)::
+  link:{config_options_url}/#schedule[
+  `at any time` (default)^]
+Automerge (`automergeschedule`)::
+  link:{config_options_url}/#automergeschedule[
+  `at any time` (default)^]
+
+.Limit
+[horizontal]
+Maximum number of concurrent opened PRs(`prConcurrentLimit`)::
+  link:{config_options_url}/#prconcurrentlimit[
+  0 +=+ no limit (default)^]
+Maximum number of concurrent branches(`branchConcurrentLimit`)::
+  link:{config_options_url}/#branchconcurrentlimit[
+  0 +=+ no limit (default,inherits value from `prConcurrentLimit`)^]
+Maximum number of PRs created per hour (`prHourlyLimit`)::
+  link:{config_options_url}/#prhourlylimit[
+  0 +=+ no limit (default)^]
+
+.Dashboard
+* link:{config_options_url}/#dependencyDashboard[
+  Create a "Dependency Dashboard" issue^]
+* link:{config_options_url}/#dependencyDashboardAutoclose[
+  Close "Dependency Dashboard" issue if there are no more updates^]
+
+.If you feel that Renovate is too noisy
+[NOTE]
+====
+.Let's change the values of the following options
+* schedule
+** `schedule`
+** `automergeschedule`
+* Limit
+** `prConcurrentLimit`
+** `branchConcurrentLimit`
+
+See link:{renovate_doc_url}/noise-reduction/[Noisy Reduction^]
+====
+
+== GitHub Actions
+
+:filename: reenable-automerge-action.yml
+* link:{workflows_directory}/{filename}[{filename}^]
+
+== Setup
+
+Install {github_marketplace_url}/renovate[Renovate^] of GitHub App.
+
+See link:{github_url}/renovatebot/tutorial[tutorial^] for more details.
+
+[CAUTION]
+.Need to install Renovate Approve
+====
+If link:{github_docs_url}/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule#:~:text=be%20merged%2C%20select-,Require%20approvals,-%2C%20click%20the%20Required[
+`Require approvals` is enable of branch protection rule^],
+need to install approve apps.
+
+:renovate_approve_url: {github_url}/apps/renovate-approve
+.Approve apps
+* link:{renovate_approve_url}[Renovate Approve^]
+* link:{renovate_approve_url}-2[Renovate Approve 2^] +
+  If minimum 2 PR reviewers.
+====
+
+
+'''
+
+:author_link: link:https://github.com/hituzi-no-sippo[{author}^]
+Copyright (C) 2022 {author_link}

@@ -1,9 +1,9 @@
 = Template repository
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.5.0
-:revdate: 2022-07-25T16:35:32+09:00
-:revremark: add setup shell
+:revnumber: v0.6.0
+:revdate: 2022-12-29T13:58:23+09:00
+:revremark: add Renovate
 :description: README for {doctitle}
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -16,6 +16,12 @@
 :aqua_url: https://aquaproj.github.io
 
 == Tools
+
+=== dependence
+
+:renovate_link: link:https://docs.renovatebot.com[Renovate^]
+[horizontal]
+Automating dependency updater:: {renovate_link}
 
 === Tool Version Manager
 
@@ -49,6 +55,8 @@ See `docs/dev` for more details.
   Install aqua^]
 . Run link:./{setup_shell_path}[setup shell^] +
   `bash {setup_shell_path}`
+. link:./docs/dev/dependence/renovate.adoc#setup[
+  Setup Renovate^]
 
 
 '''
