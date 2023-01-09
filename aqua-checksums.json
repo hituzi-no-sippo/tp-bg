@@ -1,6 +1,11 @@
 {
   "checksums": [
     {
+      "id": "github_release/github.com/errata-ai/vale/v2.22.0/vale_2.22.0_Linux_64-bit.tar.gz",
+      "checksum": "74214B5C468F4D46A09A4DF09E763A4AFD675E4711C25EC817F878D9313085F2",
+      "algorithm": "sha256"
+    },
+    {
       "id": "registries/github_content/github.com/aquaproj/aqua-registry/v3.120.0/registry.yaml",
       "checksum": "1c622d5e41eba06e62a3e65b5661a29d7eabf570b3442f3a532522816d6c70ffa819724d99ecb8159244090de29eea9d2755a47e0bb5c33904c3aa3bcb015f05",
       "algorithm": "sha512"

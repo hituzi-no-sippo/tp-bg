@@ -1,9 +1,9 @@
 = Template repository
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.6.0
-:revdate: 2022-12-29T13:58:23+09:00
-:revremark: add Renovate
+:revnumber: v0.7.0
+:revdate: 2022-07-25T19:55:33+09:00
+:revremark: add Vale of natural language linter
 :description: README for {doctitle}
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -16,6 +16,28 @@
 :aqua_url: https://aquaproj.github.io
 
 == Tools
+
+=== Writing docs
+
+==== Natural language
+
+:vale_url: https://vale.sh
+:vale_link: link:{vale_url}[Vale^]
+[horizontal]
+Lint:: {vale_link}
+Spell Check::
++
+--
+[horizontal]
+Docs:: Vale
+--
+
+[CAUTION]
+====
+link:https://asciidoctor.org[
+Asciidoctor^] is required to lint an AsciiDoc file.
+====
+
 
 === dependence
 
