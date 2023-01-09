@@ -1,0 +1,29 @@
+---
+name: Lint JSON
+
+on:
+  push:
+    paths:
+      - "**.json"
+      - ".dprint.json"
+  pull_request:
+    paths:
+      - "**.json"
+      - ".dprint.json"
+
+jobs:
+  format:
+    name: Check format
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install formatter
+        uses: aquaproj/aqua-installer@v2.0.2
+        with:
+          aqua_version: v1.30.3
+          aqua_opts: --tags dprint
+
+      - name: Check format
+        run: dprint check "**/*.json"

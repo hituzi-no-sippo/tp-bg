@@ -1,14 +1,15 @@
 = JSON
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.3.0
-:revdate: 2022-07-25T16:49:29+09:00
+:revnumber: v0.4.0
+:revdate: 2022-07-26T17:12:27+09:00
 :revremark: Add link to configuration file of formatter
 :description: JSON
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
 :creation_date: 2022-07-24T16:31:37+09:00
 :root_directory: ../../..
+:workflows_directory: {root_directory}/.github/workflows
 
 == Format
 
@@ -17,6 +18,10 @@
 Use link:{dprint_url}[dprint^] with {json_plugin_link}.
 
 link:{root_directory}/.dprint.json[Configuration File^]
+
+:filename: lint-json.yml
+.GitHub Actions
+* link:{workflows_directory}/{filename}[{filename}^]
 
 
 '''
