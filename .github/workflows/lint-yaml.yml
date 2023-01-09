@@ -6,10 +6,12 @@ on:
     paths:
       - "**.ya?ml"
       - ".dprint.json"
+      - ".yamllint.yml"
   pull_request:
     paths:
       - "**.ya?ml"
       - ".dprint.json"
+      - ".yamllint.yml"
 
 jobs:
   format:
@@ -27,3 +29,20 @@ jobs:
 
       - name: Check format
         run: dprint check "**/*.{yml,yaml}"
+
+  lint:
+    name: Lint
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run yamllint with reviewdog
+        uses: reviewdog/action-yamllint@v1
+        with:
+          fail_on_error: true
+          filter_mode: file
+          # yamllint disable-line rule:line-length
+          reporter: ${{ (github.event_name == 'pull_request' && 'github-pr-review') || 'github-check' }}

@@ -1,13 +1,14 @@
 = YAML
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.4.0
-:revdate: 2022-07-26T17:09:15+09:00
-:revremark: Add GitHub Actions to check format
+:revnumber: v0.7.0
+:revdate: 2022-07-27T13:46:02+09:00
+:revremark: add GitHub Actions to lint YAML with reviewdog
 :description: YAML
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
 :creation_date: 2022-07-25T17:24:07+09:00
+:github_url: https://github.com
 :root_directory: ../../..
 :workflows_directory: {root_directory}/.github/workflows
 
@@ -22,6 +23,20 @@ link:{root_directory}/.dprint.json[Configuration File^]
 :filename: lint-yaml.yml
 .GitHub Actions
 * link:{workflows_directory}/{filename}[{filename}^]
+
+== Lint
+
+:yamllint_link: link:https://yamllint.readthedocs.io[yamllint^]
+Use {yamllint_link}.
+
+link:{root_directory}/.yamllint.yml[Configuration File^]
+
+:filename: lint-yaml.yml
+:github_actions_marketplace_url: {github_url}/marketplace/actions
+:run_yamllint_with_reviewdog_link: link:{github_actions_marketplace_url}/run-yamllint-with-reviewdog[run-yamllint-with-reviewdog^]
+.GitHub Actions
+* link:{workflows_directory}/{filename}[{filename}^] +
+  Use {run_yamllint_with_reviewdog_link}.
 
 
 '''

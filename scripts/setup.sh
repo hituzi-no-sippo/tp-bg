@@ -14,6 +14,17 @@ function install_tools_with_version_manager() {
 
 	aqua install --only-link
 }
+function __setup_yaml_tools() {
+	info "Setup YAML tools"
+
+	function __setup_linter() {
+		# Use `python -m pip` instead of `pip`.
+		# https://snarky.ca/why-you-should-use-python-m-pip/
+		python -m pip install --upgrade yamllint --user
+	}
+
+	__setup_linter
+}
 function __setup_natural_language() {
 	info "Setup natural language tools"
 
@@ -29,6 +40,7 @@ function setup() {
 
 	install_tools_with_version_manager
 
+	__setup_yaml_tools
 	__setup_natural_language
 
 	info "Setup Complete"
