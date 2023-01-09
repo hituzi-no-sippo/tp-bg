@@ -4,7 +4,9 @@
     ":semanticPrefixFixDepsChoreOthers",
     "group:monorepos",
     "group:recommended",
-    "workarounds:all"
+    "workarounds:all",
+    "github>aquaproj/aqua-renovate-config#1.5.1",
+    "github>aquaproj/aqua-renovate-config:file#1.5.1(^aqua/.*\\.ya?ml$)"
   ],
   "patch": {
     "automerge": true
@@ -24,6 +26,30 @@
   "configMigration": true,
 
   "packageRules": [
+    {
+      "matchPaths": [
+        "aqua.yaml",
+        "aqua/*.yaml"
+      ],
+      "addLabels": [
+        "aqua"
+      ],
+      "groupName": "aqua package",
+      "minor": {
+        "automerge": true
+      }
+    },
+    {
+      "matchPackagePatterns": [
+        "aquaproj/aqua"
+      ],
+      "addLabels": [
+        "aqua"
+      ],
+      "minor": {
+        "automerge": true
+      }
+    },
     {
       "matchManagers": [
         "github-actions"

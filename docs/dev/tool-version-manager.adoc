@@ -1,13 +1,14 @@
 = Tool Version Manager
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.3.0
-:revdate: 2023-01-09T14:04:36+09:00
-:revremark: add link to configuration file for version manager
+:revnumber: v0.4.0
+:revdate: 2023-01-09T15:31:13+09:00
+:revremark: add Renovate support
 :description: Version Manager
 :copyright: Copyright (C) 2023 {author}
 // Custom Attributes
 :creation_date: 2023-01-09T12:43:27+09:00
+:github_url: https://github.com
 :root_directory: ../..
 
 Use link:https://aquaproj.github.io[aqua^].
@@ -16,6 +17,13 @@ Declaratively manage tool versions.
 
 .Configuration File
 link:{root_directory}/aqua.yaml[aqua.yaml^]
+
+== Renovate Support
+
+:aqua_renovate_config_link: link:{github_url}/aquaproj/aqua-renovate-config[aqua-renovate-config^]
+Use {aqua_renovate_config_link} to support aqua in Renovate.
+
+Enable automerge of minor update.
 
 
 '''
