@@ -5,3 +5,4 @@ dockerfile
 gomod
 dprint
 actionlint
+reviewdog
