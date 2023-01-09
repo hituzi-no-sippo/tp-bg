@@ -44,6 +44,8 @@ See `docs/dev` for more details.
 * link:{repository_url}/generate[Use this template^]
 . Clone repository +
   `gh repo clone <REPOSITORY_NAME> && cd <REPOSITORY_NAME>`
+. link:{aqua_url}/docs/tutorial-basics/quick-start#install-aqua[
+  Install aqua^]
 
 
 '''
