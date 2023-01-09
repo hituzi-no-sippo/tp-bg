@@ -1,0 +1,24 @@
+= Tool Version Manager
+:author: hituzi no sippo
+:email: dev@hituzi-no-sippo.me
+:revnumber: v0.3.0
+:revdate: 2023-01-09T14:04:36+09:00
+:revremark: add link to configuration file for version manager
+:description: Version Manager
+:copyright: Copyright (C) 2023 {author}
+// Custom Attributes
+:creation_date: 2023-01-09T12:43:27+09:00
+:root_directory: ../..
+
+Use link:https://aquaproj.github.io[aqua^].
+
+Declaratively manage tool versions.
+
+.Configuration File
+link:{root_directory}/aqua.yaml[aqua.yaml^]
+
+
+'''
+
+:author_link: link:https://github.com/hituzi-no-sippo[{author}^]
+Copyright (C) 2023 {author_link}

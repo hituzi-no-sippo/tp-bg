@@ -1,9 +1,9 @@
 = Template repository
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.3.0
-:revdate: 2022-07-25T16:35:19+09:00
-:revremark: Add Introduction
+:revnumber: v0.5.0
+:revdate: 2022-07-25T16:35:32+09:00
+:revremark: add setup shell
 :description: README for {doctitle}
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -13,6 +13,22 @@
 :repository: {owner_name}/{repository_name}
 :github_url: https://github.com
 :repository_url: {github_url}/{repository}
+:aqua_url: https://aquaproj.github.io
+
+== Tools
+
+=== Tool Version Manager
+
+:aqua_link: link:{aqua_url}[aqua^]
+[horizontal]
+Declaratively manage:: {aqua_link}
+
+
+[NOTE]
+====
+See `docs/dev` for more details.
+====
+
 
 == Supported Platforms
 
@@ -22,12 +38,17 @@
 
 == Introduction
 
+:setup_shell_path: scripts/setup.sh
 .Setup
 . Create repository with this template
 * `gh repo create <REPOSITORY_NAME> --public --template {repository}`
 * link:{repository_url}/generate[Use this template^]
 . Clone repository +
   `gh repo clone <REPOSITORY_NAME> && cd <REPOSITORY_NAME>`
+. link:{aqua_url}/docs/tutorial-basics/quick-start#install-aqua[
+  Install aqua^]
+. Run link:./{setup_shell_path}[setup shell^] +
+  `bash {setup_shell_path}`
 
 
 '''
