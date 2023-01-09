@@ -1,14 +1,21 @@
 = Git hooks
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.1.0
-:revdate: 2022-07-24T17:28:24+09:00
-:revremark: expand template
+:revnumber: v0.2.0
+:revdate: 2022-07-27T13:55:06+09:00
+:revremark: add pre-commit of git hooks manager
 :description: Git hooks
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
 :creation_date: 2022-07-24T17:28:24+09:00
+:pre_commit_config_file: ../../../.pre-commit-config.yaml
 
+== Manager
+
+:pre_commit_link: link:https://pre-commit.com/[pre-commit^]
+Use {pre_commit_link}.
+
+link:{pre_commit_config_file}[Configuration File^]
 
 
 '''
