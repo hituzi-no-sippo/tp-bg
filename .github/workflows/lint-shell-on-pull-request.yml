@@ -1,0 +1,42 @@
+---
+name: Lint shell on pull request
+
+on:
+  pull_request:
+    paths:
+      - "**.sh"
+      - ".shellcheckrc"
+
+jobs:
+  format:
+    name: Check format
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run shfmt with reviewdog
+        uses: reviewdog/action-shfmt@v1
+        with:
+          fail_on_error: true
+          filter_mode: file
+          # default is '-i 2 -ci'
+          shfmt_flags: ""
+
+  lint:
+    name: Lint
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run shellcheck with reviewdog
+        uses: reviewdog/action-shellcheck@v1
+        with:
+          fail_on_error: true
+          filter_mode: file
+          reporter: github-pr-review
