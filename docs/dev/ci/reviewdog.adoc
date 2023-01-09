@@ -1,0 +1,43 @@
+= reviewdog
+:author: hituzi no sippo
+:email: dev@hituzi-no-sippo.me
+:revnumber: v0.2.0
+:revdate: 2022-08-03T17:15:10+09:00
+:revremark: add overview
+:description: reviewdog
+:copyright: Copyright (C) 2022 {author}
+// Custom Attributes
+:creation_date: 2022-08-03T16:19:22+09:00
+:reviewdog_url: https://github.com/reviewdog/reviewdog
+:reviewdog_link: link:{reviewdog_url}[reviewdog^]
+:root_directory: ../../..
+:workflows_directory: {root_directory}/.github/workflows
+
+{reviewdog_link} is automated code review tool integrated
+with any code analysis tools.
+
+:github_checks_link: link:https://help.github.com/articles/about-status-checks/[GitHub Checks^]
+:reporter_link: link:{reviewdog_url}#reporters[reporter^]
+:github_check_link: {reviewdog_url}#reporter-github-checks-%2Dreportergithub-check[github-check^]
+:github_pr_check_link: {reviewdog_url}#reporter-github-checks-%2Dreportergithub-pr-check[github-pr-check^]
+:github_pr_review_link: {reviewdog_url}#reporter-github-pullrequest-review-comment-%2Dreportergithub-pr-review[github-pr-review^]
+:set_reporter_url: {workflows_directory}/lint-github-actions.yml#:~:text=reporter%3A%20%24%7B%7B%20(github.event_name%20%3D%3D%20%27pull_request%27%20%26%26%20%27github%2Dpr%2Dreview%27)%20%7C%7C%20%27github%2Dcheck%27%20%7D%7D
+.Result reporting method and {reporter_link}
+{github_checks_link}::
+  * {github_check_link}  +
+    link:{set_reporter_url}[
+    Use this reporter on push event of GitHub Action^].
+  * {github_pr_check_link} +
+    Unlike github-check,
+    reviewdog doesn't reports result on push event of GitHub Actions.
+GitHub PullRequest review comment::
+  * {github_pr_review_link} +
+    link:{set_reporter_url}[
+    Use this reporter on pull request event of GitHub Action^].
+    Use GitHub Personal API Access Token.
+
+
+'''
+
+:author_link: link:https://github.com/hituzi-no-sippo[{author}^]
+Copyright (C) 2022 {author_link}

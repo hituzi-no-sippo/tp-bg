@@ -11,6 +11,11 @@
       "algorithm": "sha256"
     },
     {
+      "id": "github_release/github.com/rhysd/actionlint/v1.6.22/actionlint_1.6.22_linux_amd64.tar.gz",
+      "checksum": "7D7A3061B59718728788E75E6A177C621A31A683FFD21FEDEABC1296FC2EE289",
+      "algorithm": "sha256"
+    },
+    {
       "id": "registries/github_content/github.com/aquaproj/aqua-registry/v3.120.0/registry.yaml",
       "checksum": "1c622d5e41eba06e62a3e65b5661a29d7eabf570b3442f3a532522816d6c70ffa819724d99ecb8159244090de29eea9d2755a47e0bb5c33904c3aa3bcb015f05",
       "algorithm": "sha512"

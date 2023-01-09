@@ -1,0 +1,28 @@
+---
+name: Lint GitHub Actions
+
+on:
+  push:
+    paths:
+      - ".github/workflows/*"
+  pull_request:
+    paths:
+      - ".github/workflows/*"
+
+jobs:
+  lint:
+    name: Lint
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run actionlint with reviewdog
+        uses: reviewdog/action-actionlint@v1
+        with:
+          fail_on_error: true
+          filter_mode: file
+          # yamllint disable-line rule:line-length
+          reporter: ${{ (github.event_name == 'pull_request' && 'github-pr-review') || 'github-check' }}
