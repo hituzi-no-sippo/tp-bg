@@ -1,6 +1,11 @@
 {
   "checksums": [
     {
+      "id": "github_release/github.com/dprint/dprint/0.34.1/dprint-x86_64-unknown-linux-gnu.zip",
+      "checksum": "2F05454EB573C8161DE0A71A1199E37B13D40ADAC50C5D154FA67AA66480A44B772E47F4F65D47071B683AF9B5B3B5390D5770AD5951D70D3F785DBC76168370",
+      "algorithm": "sha512"
+    },
+    {
       "id": "github_release/github.com/errata-ai/vale/v2.22.0/vale_2.22.0_Linux_64-bit.tar.gz",
       "checksum": "74214B5C468F4D46A09A4DF09E763A4AFD675E4711C25EC817F878D9313085F2",
       "algorithm": "sha256"
