@@ -1,0 +1,30 @@
+= Shell
+:author: hituzi no sippo
+:email: dev@hituzi-no-sippo.me
+:revnumber: v0.3.0
+:revdate: 2022-07-26T17:36:27+09:00
+:revremark: add linter
+:description: Shell
+:copyright: Copyright (C) 2022 {author}
+// Custom Attributes
+:creation_date: 2022-07-24T16:00:52+09:00
+:github_url: https://github.com
+
+== Formatter
+
+:shfmt_link: link:{github_url}/mvdan/sh[shfmt^]
+Use {shfmt_link}.
+
+== Linter
+
+:shellcheck_link: link:https://www.shellcheck.net/[shellcheck^]
+Use {shellcheck_link}.
+
+If you want to modify quotes automatically (`+${hoo}+` => `"$hoo"`), use link:{github_url}/anordal/shellharden[
+shellharden^].
+
+
+'''
+
+:author_link: link:https://github.com/hituzi-no-sippo[{author}^]
+Copyright (C) 2022 {author_link}
