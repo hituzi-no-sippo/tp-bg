@@ -27,3 +27,19 @@ jobs:
 
       - name: Check format
         run: dprint check "**/*.json"
+
+  validate:
+    name: Validate
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install validator
+        uses: aquaproj/aqua-installer@v2.0.2
+        with:
+          aqua_version: v1.30.3
+          aqua_opts: --tags dasel
+
+      - name: Validate JSON
+        run: dasel validate "**.json"
