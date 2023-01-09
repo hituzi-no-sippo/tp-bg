@@ -1,14 +1,17 @@
 = Tool Version Manager
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.1.0
-:revdate: 2023-01-09T12:43:27+09:00
-:revremark: expand template
+:revnumber: v0.2.0
+:revdate: 2023-01-09T13:33:33+09:00
+:revremark: add overview of aqua
 :description: Version Manager
 :copyright: Copyright (C) 2023 {author}
 // Custom Attributes
 :creation_date: 2023-01-09T12:43:27+09:00
 
+Use link:https://aquaproj.github.io[aqua^].
+
+Declaratively manage tool versions.
 
 
 '''

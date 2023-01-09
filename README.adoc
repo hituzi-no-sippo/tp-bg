@@ -1,9 +1,9 @@
 = Template repository
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.3.0
-:revdate: 2022-07-25T16:35:19+09:00
-:revremark: Add Introduction
+:revnumber: v0.4.0
+:revdate: 2023-01-09T16:03:42+09:00
+:revremark: add aqua of tool version manager
 :description: README for {doctitle}
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -13,6 +13,22 @@
 :repository: {owner_name}/{repository_name}
 :github_url: https://github.com
 :repository_url: {github_url}/{repository}
+:aqua_url: https://aquaproj.github.io
+
+== Tools
+
+=== Tool Version Manager
+
+:aqua_link: link:{aqua_url}[aqua^]
+[horizontal]
+Declaratively manage:: {aqua_link}
+
+
+[NOTE]
+====
+See `docs/dev` for more details.
+====
+
 
 == Supported Platforms
 
