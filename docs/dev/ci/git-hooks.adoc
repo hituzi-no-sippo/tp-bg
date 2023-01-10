@@ -1,14 +1,18 @@
 = Git hooks
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.7.0
-:revdate: 2022-07-27T17:49:18+09:00
-:revremark: add git pre-commit hook for line ending replaced
+:revnumber: v0.10.0
+:revdate: 2022-07-27T18:02:08+09:00
+:revremark: add git pre-commit hook to check VCS permalinks
 :description: Git hooks
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
 :creation_date: 2022-07-24T17:28:24+09:00
+:owner_name: hituzi-no-sippo
+:repository_name: template-repository
+:repository: {owner_name}/{repository_name}
 :github_url: https://github.com
+:repository_url: {github_url}/{repository}
 :pre_commit_url: https://pre-commit.com
 :pre_commit_ci_org_url: {github_url}/pre-commit-ci
 :pre_commit_orizinazation_url: {github_url}/pre-commit
@@ -37,6 +41,27 @@ If there is no official `language: system` hook, use a local hook.
   Don't trim markdowns.
 * {end_of_line_fixer_link}
 * {mixed_line_ending_link}
+
+=== Git
+
+:no_commit_to_branch_link: link:{pre_commit_repository_url}#no-commit-to-branch[no commit to branch]
+:check_merge_conflict_link: link:{pre_commit_repository_url}#check-merge-conflict[check merge conflict]
+:check_vcs_permalinks_link: link:{pre_commit_repository_url}#check-vcs-permalinks[check VCS permalinks]
+* {no_commit_to_branch_link}
+  Protect main branches from direct push.
+  You could do something similar with link:{repository_url}/settings/branch_protection_rules/new[
+  branch protection rules^].
+  (See also link:https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests[
+  Defining the mergeability of pull requests^].)
+* {check_merge_conflict_link}
+* {check_vcs_permalinks_link}
++
+--
+:prefix_url: \https://github.com/{repository}
+[horizontal]
+correct:: `{prefix_url}/blob/6c16acad8d816f82e0f382bc4746b9e3e2d52557/LICENSE#L1`
+wrong:: `{prefix_url}/blob/main/LICENSE#L1`
+--
 
 === pre-commit
 
