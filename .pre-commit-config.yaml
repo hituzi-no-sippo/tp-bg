@@ -60,13 +60,19 @@ repos:
         args: [--strict]
 
   # TOML
-  # Format
+  # Format & Lint
   - repo: local
     hooks:
       - id: taplo-format
         name: Taplo format
         language: system
         entry: taplo format
+        types:
+          - toml
+      - id: taplo-lint
+        name: Taplo lint
+        language: system
+        entry: taplo lint
         types:
           - toml
 
@@ -139,6 +145,7 @@ ci:
     - dprint
     - dasel-validate-bin
     - taplo-format
+    - taplo-lint
     - editorconfig-checker-system
     - actionlint
     - vale
