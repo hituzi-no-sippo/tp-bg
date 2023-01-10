@@ -17,6 +17,17 @@ repos:
           - --simplify
         types:
           - shell
+  # Lint
+  - repo: local
+    hooks:
+      - id: shellcheck
+        name: shellcheck
+        language: system
+        entry: shellcheck
+        args:
+          - --severity=style
+        types:
+          - shell
 
   # JSON & YAML
   # Formatter
@@ -62,5 +73,6 @@ ci:
 
   skip:
     - shfmt
+    - shellcheck
     - dprint
     - dasel-validate-bin

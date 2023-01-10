@@ -1,9 +1,9 @@
 = Shell
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.9.0
-:revdate: 2022-08-18T21:02:14+09:00
-:revremark: add git hook to check format
+:revnumber: v0.10.0
+:revdate: 2022-08-18T21:02:22+09:00
+:revremark: add git hook for shellcheck
 :description: Shell
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -78,6 +78,13 @@ Use {shellcheck_link}.
 
 If you want to modify quotes automatically (`+${hoo}+` => `"$hoo"`), use link:{github_url}/anordal/shellharden[
 shellharden^].
+
+:pre_commit_for_shellcheck_url: {github_url}/koalaman/shellcheck-precommit
+:pre_commit_for_shellcheck_link: link:{pre_commit_for_shellcheck_url}[koalaman/shellcheck-precommit^]
+.Git hooks
+pre-commit::
+  Use link:{pre_commit_config_file}#:~:text=id%3A%20shellcheck[
+  local hook^]
 
 :filename: lint-shell.yml
 :filename_on_pull_request: lint-shell-on-pull-request.yml
