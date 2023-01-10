@@ -1,9 +1,9 @@
 = Git hooks
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.10.0
-:revdate: 2022-07-27T18:02:08+09:00
-:revremark: add git pre-commit hook to check VCS permalinks
+:revnumber: v0.13.0
+:revdate: 2022-07-27T18:12:50+09:00
+:revremark: add git pre-commit hook to check added file size
 :description: Git hooks
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -62,6 +62,20 @@ If there is no official `language: system` hook, use a local hook.
 correct:: `{prefix_url}/blob/6c16acad8d816f82e0f382bc4746b9e3e2d52557/LICENSE#L1`
 wrong:: `{prefix_url}/blob/main/LICENSE#L1`
 --
+
+=== File
+
+:fix_byte_order_marker_link: link:{pre_commit_repository_url}#fix-byte-order-marker[fix byte order marker^]
+:check_case_conflict_link: link:{pre_commit_repository_url}#check-case-conflict[check case conflict^]
+:check_added_large_files_link: link:{pre_commit_repository_url}#check-added-large-files[check added large files^]
+* {fix_byte_order_marker_link}
+* {check_case_conflict_link}
+  Prevents add file with name that same on a case-insensitive.
+  For example, `readme.md`, `REAMDME.md`
+* {check_added_large_files_link}
+  Prevents adding files larger than the specified size.
+  The argument `--maxkb` specifies the max size.
+  Default max size 500kb.
 
 === pre-commit
 
