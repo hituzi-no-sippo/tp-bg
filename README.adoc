@@ -1,9 +1,9 @@
 = Template repository
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.17.0
-:revdate: 2022-08-16T18:08:00+09:00
-:revremark: add editorconfig-checker of INI formatter
+:revnumber: v0.18.0
+:revdate: 2022-08-16T18:06:11+09:00
+:revremark: add taplo of TOML formatter & linter
 :description: README for {doctitle}
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -46,6 +46,12 @@ Lint:: {dasel_link}
 [horizontal]
 Format:: {dprint_link} with {prettier_plugin_link}
 Lint:: {yamllint_link}
+
+==== TOML
+
+:taplo_link: link:https://taplo.tamasfe.dev/[taplo^]
+[horizontal]
+Format & Lint:: {taplo_link}
 
 ==== INI
 

@@ -13,3 +13,4 @@ shellcheck
 shellharden
 [Dd]asel
 yamllint
+[Tt]aplo
