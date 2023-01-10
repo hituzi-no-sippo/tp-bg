@@ -1,9 +1,9 @@
 = Git hooks
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.13.0
-:revdate: 2022-07-27T18:12:50+09:00
-:revremark: add git pre-commit hook to check added file size
+:revnumber: v0.15.0
+:revdate: 2022-07-27T18:22:40+09:00
+:revremark: add git pre-commit hook to check files with shebang
 :description: Git hooks
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -76,6 +76,15 @@ wrong:: `{prefix_url}/blob/main/LICENSE#L1`
   Prevents adding files larger than the specified size.
   The argument `--maxkb` specifies the max size.
   Default max size 500kb.
+
+=== Shebang
+
+:check_executables_have_shebangs_link: link:{pre_commit_repository_url}#check-executables-have-shebangs[check executables have shebangs^]
+:check_shebang_scripts_are_executable_link: link:{pre_commit_repository_url}#check-shebang-scripts-are-executable[check shebang scripts are executable^]
+* {check_executables_have_shebangs_link}
+  Check for files with execute permission.
+* {check_shebang_scripts_are_executable_link}
+  Check for file with shebang.
 
 === pre-commit
 
