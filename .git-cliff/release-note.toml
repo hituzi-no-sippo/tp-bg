@@ -15,11 +15,37 @@ body = """
 {% else %}\
     ## [Unreleased]
 {% endif %}\
-{% for group, commits in commits | group_by(attribute="group") %}
+{% for group, commits in commits | filter(attribute="breaking", value=true) | group_by(attribute="group") %}
+    ### Breaking Change
+
+    #### {{ group | upper_first }}
+    {% for scope, commits in commits | group_by(attribute="scope") %}
+        {% set replaced_scope = scope | replace(from="-", to=" ") -%}
+        {% if replaced_scope is matching("[A-Z]$") -%}
+            {% set format_scope = replaced_scope -%}
+        {% else -%}
+            {% set format_scope = replaced_scope | title -%}
+        {% endif -%}
+        ##### {{ format_scope }}
+        {% for commit in commits %}
+            - {{ commit.message | upper_first }} ({{ commit.id }})\
+        {% endfor %}
+    {% endfor %}\
+{% endfor -%}\n
+{% for group, commits in commits | filter(attribute="breaking", value=false) | group_by(attribute="group") %}
     ### {{ group | upper_first }}
-    {% for commit in commits %}
-        - {{ commit.message | upper_first }}\
-    {% endfor %}
+    {% for scope, commits in commits | group_by(attribute="scope") %}
+        {% set replaced_scope = scope | replace(from="-", to=" ") -%}
+        {% if replaced_scope is matching("[A-Z]$") -%}
+            {% set format_scope = replaced_scope -%}
+        {% else -%}
+            {% set format_scope = replaced_scope | title -%}
+        {% endif -%}
+        #### {{ format_scope }}
+        {% for commit in commits %}
+            - {{ commit.message | upper_first }} ({{ commit.id }})\
+        {% endfor %}
+    {% endfor %}\
 {% endfor %}\n
 """
 trim = true
@@ -32,11 +58,14 @@ conventional_commits = true
 filter_unconventional = true
 split_commits = false
 commit_parsers = [
+  { message = "^(refactor|style|test|ci|build|chore)", skip = true },
+  { message = "^doc.*: fix typo", skip = true },
+  { message = "^doc.*: (add|change|fix|remove|delete).*(url|URL|link)", skip = true },
+  { message = "^doc", group = "Documentation" },
   { message = "^.*: add", group = "Added" },
   { message = "^.*: support", group = "Added" },
   { message = "^.*: remove", group = "Removed" },
   { message = "^.*: delete", group = "Removed" },
-  { message = "^test", group = "Fixed" },
   { message = "^fix", group = "Fixed" },
   { message = "^.*: fix", group = "Fixed" },
   { message = "^.*", group = "Changed" },
