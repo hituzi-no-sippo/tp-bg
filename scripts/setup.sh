@@ -40,7 +40,8 @@ function __setup_git_hooks() {
 	python -m pip install --upgrade pre-commit
 
 	pre-commit install --overwrite \
-		--hook-type pre-commit
+		--hook-type pre-commit \
+		--hook-type commit-msg
 }
 
 function setup() {

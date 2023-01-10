@@ -1,0 +1,54 @@
+= Git commit message
+:author: hituzi no sippo
+:email: dev@hituzi-no-sippo.me
+:revnumber: v0.6.0
+:revdate: 2022-07-11T21:19:10+09:00
+:revremark: add GitHub Bot to lint commit message
+:description: Git commit message tools
+:copyright: Copyright (C) 2022 {author}
+// Custom Attributes
+:creation_date: 2022-07-11T15:36:50+09:00
+:github_url: https://github.com
+:root_directory: ../../..
+:pre_commit_config_file: {root_directory}/.pre-commit-config.yaml
+
+:conventional_commits_link: link:https://www.conventionalcommits.org[Conventional Commits^]
+== {conventional_commits_link}
+
+:cocogitto_url: https://docs.cocogitto.io
+Lint commit message with link:{cocogitto_url}[Cocogitto^].
+
+:cocogitto_documentation_url: https://docs.cocogitto.io/guide
+=== Configuration
+
+link:{root_directory}/cog.toml[Configuration File^]
+
+.Ignore Merge Commit
+Cocogitto ignores merge commit.
+For examples `Merge branch 'main' ...`, `Merge pull request ...`.
+link:{cocogitto_documentation_url}#deal-with-merge-commits[
+This is because set `ignore_merge_commits = true` in the configuration file^].
+
+=== Git hooks
+
+:repository_url_of_pre_commit_with_cocogitto: hituzi-no-sippo/pre-commit-hooks-with-cocogitto
+:pre_commit_with_cocogitto_link: link:{github_url}/{repository_url_of_pre_commit_with_cocogitto}[{repository_url_of_pre_commit_with_cocogitto}^]
+commit-msg::
+  Use link:{pre_commit_config_file}#:~:text=repo%3A%20https%3A%2F/github.com/hituzi%2Dno%2Dsippo/pre%2Dcommit%2Dhooks%2Dwith%2Dcocogitto[
+  pre-commit^] ({pre_commit_with_cocogitto_link})
+
+=== GitHub Actions
+
+:filename: lint-git-commit-message.yml
+link:{root_directory}/.github/workflows/{filename}[{filename}^]
+
+=== GitHub Bot
+
+link:https://github.com/apps/cocogitto-bot[
+Cocogitto-bot^] comments the lint error message on pull request event.
+
+
+'''
+
+:author_link: link:https://github.com/hituzi-no-sippo[{author}^]
+Copyright (C) 2022 {author_link}

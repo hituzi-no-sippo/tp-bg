@@ -92,6 +92,14 @@ repos:
     hooks:
       - id: actionlint
 
+  # Commit message
+  # Lint
+  # Conventional Commits
+  - repo: https://github.com/hituzi-no-sippo/pre-commit-hooks-with-cocogitto
+    rev: 93f9ff191297b6b2973bba4b203ac112bac5186d
+    hooks:
+      - id: lint-commit-msg-with-cocogitto
+
   # Natural Language
   - repo: local
     hooks:
