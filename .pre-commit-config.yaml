@@ -10,6 +10,7 @@ repos:
       - id: check-pre-commit-ci-config
 
 ci:
+  autoupdate_schedule: quarterly
   autofix_commit_msg: |
     fix(git-hook): auto fixes from pre-commit.com hooks
 
