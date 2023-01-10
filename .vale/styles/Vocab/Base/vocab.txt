@@ -4,3 +4,5 @@ automerge
 config
 reenable
 declaratively
+ci
+mergeability

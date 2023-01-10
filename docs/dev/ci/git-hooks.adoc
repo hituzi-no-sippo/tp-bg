@@ -1,0 +1,143 @@
+= Git hooks
+:author: hituzi no sippo
+:email: dev@hituzi-no-sippo.me
+:revnumber: v0.18.0
+:revdate: 2022-07-27T18:34:50+09:00
+:revremark: add git pre-commit hook to check private keys
+:description: Git hooks
+:copyright: Copyright (C) 2022 {author}
+// Custom Attributes
+:creation_date: 2022-07-24T17:28:24+09:00
+:owner_name: hituzi-no-sippo
+:repository_name: template-repository
+:repository: {owner_name}/{repository_name}
+:github_url: https://github.com
+:repository_url: {github_url}/{repository}
+:pre_commit_url: https://pre-commit.com
+:pre_commit_ci_org_url: {github_url}/pre-commit-ci
+:pre_commit_orizinazation_url: {github_url}/pre-commit
+:pre_commit_repository_url: {pre_commit_orizinazation_url}/pre-commit-hooks
+:pre_commit_config_file: ../../../.pre-commit-config.yaml
+
+== Hooks
+
+Linter and formatter hooks are written in JSON and YAML and other documents.
+For example, the JSON formatter hook is in the JSON document.
+
+Because we want to use the tools installed with Aqua,
+we use the official link:{pre_commit_url}#system[
+`language: system` hook^].
+If there is no official `language: system` hook, use a local hook.
+
+:hardbreaks-option:
+
+=== Style
+
+:trim_trailing_whitespace_link: link:{pre_commit_repository_url}#trailing-whitespace[trim trailing spaces^]
+:end_of_line_fixer_link: link:{pre_commit_repository_url}#end-of-file-fixer[end of line fixer^]
+:mixed_line_ending_link: link:{pre_commit_repository_url}#mixed-line-ending[mixed line ending^]
+* {trim_trailing_whitespace_link}
+  `end of line____` (`_` is space) => `end of line`
+  Don't trim markdowns.
+* {end_of_line_fixer_link}
+* {mixed_line_ending_link}
+
+=== Git
+
+:no_commit_to_branch_link: link:{pre_commit_repository_url}#no-commit-to-branch[no commit to branch]
+:check_merge_conflict_link: link:{pre_commit_repository_url}#check-merge-conflict[check merge conflict]
+:check_vcs_permalinks_link: link:{pre_commit_repository_url}#check-vcs-permalinks[check VCS permalinks]
+* {no_commit_to_branch_link}
+  Protect main branches from direct push.
+  You could do something similar with link:{repository_url}/settings/branch_protection_rules/new[
+  branch protection rules^].
+  (See also link:https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests[
+  Defining the mergeability of pull requests^].)
+* {check_merge_conflict_link}
+* {check_vcs_permalinks_link}
++
+--
+:prefix_url: \https://github.com/{repository}
+[horizontal]
+correct:: `{prefix_url}/blob/6c16acad8d816f82e0f382bc4746b9e3e2d52557/LICENSE#L1`
+wrong:: `{prefix_url}/blob/main/LICENSE#L1`
+--
+
+=== File
+
+:fix_byte_order_marker_link: link:{pre_commit_repository_url}#fix-byte-order-marker[fix byte order marker^]
+:check_case_conflict_link: link:{pre_commit_repository_url}#check-case-conflict[check case conflict^]
+:check_added_large_files_link: link:{pre_commit_repository_url}#check-added-large-files[check added large files^]
+* {fix_byte_order_marker_link}
+* {check_case_conflict_link}
+  Prevents add file with name that same on a case-insensitive.
+  For example, `readme.md`, `REAMDME.md`
+* {check_added_large_files_link}
+  Prevents adding files larger than the specified size.
+  The argument `--maxkb` specifies the max size.
+  Default max size 500kb.
+
+=== Shebang
+
+:check_executables_have_shebangs_link: link:{pre_commit_repository_url}#check-executables-have-shebangs[check executables have shebangs^]
+:check_shebang_scripts_are_executable_link: link:{pre_commit_repository_url}#check-shebang-scripts-are-executable[check shebang scripts are executable^]
+* {check_executables_have_shebangs_link}
+  Check for files with execute permission.
+* {check_shebang_scripts_are_executable_link}
+  Check for file with shebang.
+
+:latest_version_of_pre_commit: v4.3.0
+=== Symlink
+
+:check_symlinks_link: link:{pre_commit_repository_url}#check-symlinks[check broken symlinks^]
+:destroyed_symlinks_link: link:{pre_commit_repository_url}#destroyed-symlinks[destroyed symlinks^]
+:destroyed_symlinks_test_permalink_url: {pre_commit_repository_url}/blob/{latest_version_of_pre_commit}/tests/destroyed_symlinks_test.py#L33-L39
+* {check_symlinks_link}
+* {destroyed_symlinks_link}
+  link:{destroyed_symlinks_test_permalink_url}[Related to `core.symlinks`^].
+
+=== Security
+
+:detect_private_keys_link: link:{pre_commit_repository_url}#detect-private-key[detect private keys^]
+:block_list_link: link:{pre_commit_repository_url}/blob/{latest_version_of_pre_commit}/pre_commit_hooks/detect_private_key.py#L7-L16[Block List]
+* {detect_private_keys_link}
+  {block_list_link}
+
+=== pre-commit
+
+:validation_for_pre_commit_ci_config_link: {pre_commit_ci_org_url}/pre-commit-ci-config#as-a-pre-commit-hook[validation for pre-commit.ci configuration^]
+* {validation_for_pre_commit_ci_config_link}
+
+:!hardbreaks-option:
+
+
+== Manager
+
+:pre_commit_link: link:{pre_commit_url}/[pre-commit^]
+Use {pre_commit_link}.
+
+link:{pre_commit_config_file}[Configuration File^]
+
+=== Auto update
+
+Use link:https://docs.renovatebot.com/modules/manager/pre-commit/[
+Renovate^].
+
+Enable automerge of minor update on Renovate.
+
+:pre_commit_ci_url: https://pre-commit.ci
+link:{pre_commit_ci_url}#:~:text=get%20faster%20builds!-,automatic%20updates%3A,-pre%2Dcommit.ci[
+We don't use automatic update of hook with pre-commit.ci^].
+
+Set `quarterly` to `autoupdate_schedule` of pre-commit.ci config
+because automatic updates can't be disabled.
+
+pre-commit.ci does automatic updates
+link:{pre_commit_config_file}#:~:text=autoupdate_schedule%3A%20weekly[
+every week^].
+
+
+'''
+
+:author_link: link:https://github.com/hituzi-no-sippo[{author}^]
+Copyright (C) 2022 {author_link}

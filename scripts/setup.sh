@@ -34,6 +34,14 @@ function __setup_natural_language() {
 
 	__setup_linter
 }
+function __setup_git_hooks() {
+	info "Setup git hooks manager"
+
+	python -m pip install --upgrade pre-commit
+
+	pre-commit install --overwrite \
+		--hook-type pre-commit
+}
 
 function setup() {
 	info "Setup Start"
@@ -42,6 +50,7 @@ function setup() {
 
 	__setup_yaml_tools
 	__setup_natural_language
+	__setup_git_hooks
 
 	info "Setup Complete"
 }

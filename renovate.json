@@ -8,6 +8,9 @@
     "github>aquaproj/aqua-renovate-config#1.5.1",
     "github>aquaproj/aqua-renovate-config:file#1.5.1(^aqua/.*\\.ya?ml$)"
   ],
+  "pre-commit": {
+    "enabled": true
+  },
   "patch": {
     "automerge": true
   },
@@ -57,6 +60,17 @@
       "addLabels": [
         "github-actions"
       ]
+    },
+    {
+      "matchManagers": [
+        "pre-commit"
+      ],
+      "addLabels": [
+        "pre-commit"
+      ],
+      "minor": {
+        "automerge": true
+      }
     }
   ]
 }

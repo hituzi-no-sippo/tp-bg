@@ -1,9 +1,9 @@
 = Template repository
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.14.0
-:revdate: 2022-08-16T18:04:47+09:00
-:revremark: add yamllint of YAML linter
+:revnumber: v0.16.0
+:revdate: 2022-08-16T18:05:12+09:00
+:revremark: add pre-commit.ci badge
 :description: README for {doctitle}
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -48,6 +48,18 @@ Format:: {dprint_link} with {prettier_plugin_link}
 Lint:: {yamllint_link}
 
 === CI
+
+==== Git hooks
+
+:pre_commit_link: link:https://pre-commit.com/[pre-commit^]
+:pre_commit_ci_link: link:https://pre-commit.ci[pre-commit.ci^]
+[horizontal]
+Manage:: {pre_commit_link} & {pre_commit_ci_link}
+
+:pre_commit_ci_result_url: https://results.pre-commit.ci
+image:{pre_commit_ci_result_url}/badge/github/{repository}/main.svg[
+link={pre_commit_ci_result_url}/latest/github/{repository}/main,
+window=_blank]
 
 ==== GitHub Actions
 
@@ -106,6 +118,7 @@ See `docs/dev` for more details.
 == Introduction
 
 :setup_shell_path: scripts/setup.sh
+:github_marketplace_url: {github_url}/marketplace
 .Setup
 . Create repository with this template
 * `gh repo create <REPOSITORY_NAME> --public --template {repository}`
@@ -118,6 +131,9 @@ See `docs/dev` for more details.
   `bash {setup_shell_path}`
 . link:./docs/dev/dependence/renovate.adoc#setup[
   Setup Renovate^]
+. Install GitHub Apps
+* link:{github_marketplace_url}/pre-commit-ci[
+  pre-commit ci^]
 
 
 '''

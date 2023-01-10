@@ -1,0 +1,123 @@
+---
+# Can't use YAML anchors in the pre-commit configuration.
+default_stages:
+  - commit
+
+repos:
+  # Shell
+  # Format
+  - repo: local
+    hooks:
+      - id: shfmt
+        name: shfmt
+        language: system
+        entry: shfmt
+        args:
+          - --write
+          - --simplify
+        types:
+          - shell
+  # Lint
+  - repo: local
+    hooks:
+      - id: shellcheck
+        name: shellcheck
+        language: system
+        entry: shellcheck
+        args:
+          - --severity=style
+        types:
+          - shell
+
+  # JSON & YAML
+  # Formatter
+  - repo: local
+    hooks:
+      - id: dprint
+        name: dprint
+        language: system
+        entry: dprint fmt
+        types_or:
+          - json
+          - yaml
+
+  # JSON
+  # Lint
+  - repo: https://github.com/TomWright/dasel
+    rev: v2.1.0
+    hooks:
+      - id: dasel-validate-bin
+        types:
+          - json
+
+  # YAML
+  # Lint
+  # https://yamllint.readthedocs.io/en/stable/integration.html#integration-with-pre-commit
+  - repo: https://github.com/adrienverge/yamllint.git
+    rev: v1.29.0
+    hooks:
+      - id: yamllint
+        args: [--strict]
+
+  # GitHub Actions
+  # Lint
+  # https://github.com/rhysd/actionlint/blob/main/docs/usage.md#pre-commit
+  - repo: https://github.com/rhysd/actionlint
+    rev: v1.6.22
+    hooks:
+      - id: actionlint
+
+  # Natural Language
+  - repo: local
+    hooks:
+      - id: vale
+        name: vale
+        language: system
+        entry: vale
+        types:
+          - text
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      # Style
+      - id: trailing-whitespace
+        args: [--markdown-linebreak-ext=md]
+      - id: end-of-file-fixer
+      - id: mixed-line-ending
+      # Git
+      - id: no-commit-to-branch
+      - id: check-merge-conflict
+      - id: check-vcs-permalinks
+      # File
+      - id: fix-byte-order-marker
+      - id: check-case-conflict
+      - id: check-added-large-files
+      # Shebang
+      - id: check-executables-have-shebangs
+      - id: check-shebang-scripts-are-executable
+      # Symlink
+      - id: check-symlinks
+      - id: destroyed-symlinks
+      # Security
+      - id: detect-private-key
+
+  - repo: https://github.com/pre-commit-ci/pre-commit-ci-config
+    rev: v1.5.1
+    hooks:
+      - id: check-pre-commit-ci-config
+
+ci:
+  autoupdate_schedule: quarterly
+  autofix_commit_msg: |
+    fix(git-hook): auto fixes from pre-commit.com hooks
+
+    for more information, see https://pre-commit.ci
+
+  skip:
+    - shfmt
+    - shellcheck
+    - dprint
+    - dasel-validate-bin
+    - actionlint
+    - vale
