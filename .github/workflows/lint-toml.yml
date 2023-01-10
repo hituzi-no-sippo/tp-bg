@@ -1,0 +1,45 @@
+---
+name: Lint TOML
+
+on:
+  push:
+    paths:
+      - "**.toml"
+      - ".taplo.toml"
+  pull_request:
+    paths:
+      - "**.toml"
+      - ".taplo.toml"
+
+jobs:
+  format:
+    name: Check format
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install formatter
+        uses: aquaproj/aqua-installer@v2.0.2
+        with:
+          aqua_version: v1.30.3
+          aqua_opts: --tags taplo
+
+      - name: Check format
+        run: taplo format --check --colors always
+
+  lint:
+    name: Lint
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install linter
+        uses: aquaproj/aqua-installer@v2.0.2
+        with:
+          aqua_version: v1.30.3
+          aqua_opts: --tags taplo
+
+      - name: Lint
+        run: taplo lint --colors always

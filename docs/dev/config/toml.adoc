@@ -1,9 +1,9 @@
 = TOML
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.4.0
-:revdate: 2022-07-30T09:37:17+09:00
-:revremark: add pre-commit hooks to format and lint
+:revnumber: v0.5.0
+:revdate: 2022-07-30T09:18:51+09:00
+:revremark: add GitHub Actions
 :description: TOML
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -11,6 +11,7 @@
 :github_url: https://github.com
 :root_directory: ../../..
 :pre_commit_config_file: {root_directory}/.pre-commit-config.yaml
+:workflows_directory: {root_directory}/.github/workflows
 
 == Format & Lint
 
@@ -23,6 +24,10 @@ link:{root_directory}/.taplo.toml[Configuration File^]
 pre-commit::
   Use link:{pre_commit_config_file}#:~:text=id%3A%20taplo%2Dformat[
   local hook^]
+
+:filename: lint-toml.yml
+.GitHub Actions
+* link:{workflows_directory}/{filename}[{filename}^]
 
 
 '''
