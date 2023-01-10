@@ -59,6 +59,23 @@ repos:
       - id: yamllint
         args: [--strict]
 
+  # TOML
+  # Format & Lint
+  - repo: local
+    hooks:
+      - id: taplo-format
+        name: Taplo format
+        language: system
+        entry: taplo format
+        types:
+          - toml
+      - id: taplo-lint
+        name: Taplo lint
+        language: system
+        entry: taplo lint
+        types:
+          - toml
+
   # INI
   # Format
   - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
@@ -127,6 +144,8 @@ ci:
     - shellcheck
     - dprint
     - dasel-validate-bin
+    - taplo-format
+    - taplo-lint
     - editorconfig-checker-system
     - actionlint
     - vale
