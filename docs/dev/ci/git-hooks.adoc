@@ -1,9 +1,9 @@
 = Git hooks
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.4.0
-:revdate: 2022-07-27T14:25:18+09:00
-:revremark: add autoupdate section
+:revnumber: v0.7.0
+:revdate: 2022-07-27T17:49:18+09:00
+:revremark: add git pre-commit hook for line ending replaced
 :description: Git hooks
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -11,6 +11,8 @@
 :github_url: https://github.com
 :pre_commit_url: https://pre-commit.com
 :pre_commit_ci_org_url: {github_url}/pre-commit-ci
+:pre_commit_orizinazation_url: {github_url}/pre-commit
+:pre_commit_repository_url: {pre_commit_orizinazation_url}/pre-commit-hooks
 :pre_commit_config_file: ../../../.pre-commit-config.yaml
 
 == Hooks
@@ -23,10 +25,25 @@ we use the official link:{pre_commit_url}#system[
 `language: system` hook^].
 If there is no official `language: system` hook, use a local hook.
 
+:hardbreaks-option:
+
+=== Style
+
+:trim_trailing_whitespace_link: link:{pre_commit_repository_url}#trailing-whitespace[trim trailing spaces^]
+:end_of_line_fixer_link: link:{pre_commit_repository_url}#end-of-file-fixer[end of line fixer^]
+:mixed_line_ending_link: link:{pre_commit_repository_url}#mixed-line-ending[mixed line ending^]
+* {trim_trailing_whitespace_link}
+  `end of line____` (`_` is space) => `end of line`
+  Don't trim markdowns.
+* {end_of_line_fixer_link}
+* {mixed_line_ending_link}
+
 === pre-commit
 
 :validation_for_pre_commit_ci_config_link: {pre_commit_ci_org_url}/pre-commit-ci-config#as-a-pre-commit-hook[validation for pre-commit.ci configuration^]
 * {validation_for_pre_commit_ci_config_link}
+
+:!hardbreaks-option:
 
 
 == Manager
