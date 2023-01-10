@@ -1,14 +1,33 @@
 = Git hooks
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.2.0
-:revdate: 2022-07-27T13:55:06+09:00
-:revremark: add pre-commit of git hooks manager
+:revnumber: v0.3.0
+:revdate: 2022-07-27T14:47:37+09:00<
+:revremark: add hook for validation for pre-commit.ci configuration
 :description: Git hooks
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
 :creation_date: 2022-07-24T17:28:24+09:00
+:github_url: https://github.com
+:pre_commit_url: https://pre-commit.com
+:pre_commit_ci_org_url: {github_url}/pre-commit-ci
 :pre_commit_config_file: ../../../.pre-commit-config.yaml
+
+== Hooks
+
+Linter and formatter hooks are written in JSON and YAML and other documents.
+For example, the JSON formatter hook is in the JSON document.
+
+Because we want to use the tools installed with Aqua,
+we use the official link:{pre_commit_url}#system[
+`language: system` hook^].
+If there is no official `language: system` hook, use a local hook.
+
+=== pre-commit
+
+:validation_for_pre_commit_ci_config_link: {pre_commit_ci_org_url}/pre-commit-ci-config#as-a-pre-commit-hook[validation for pre-commit.ci configuration^]
+* {validation_for_pre_commit_ci_config_link}
+
 
 == Manager
 
