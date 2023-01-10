@@ -67,6 +67,16 @@ repos:
     hooks:
       - id: actionlint
 
+  # Natural Language
+  - repo: local
+    hooks:
+      - id: vale
+        name: vale
+        language: system
+        entry: vale
+        types:
+          - text
+
   - repo: https://github.com/pre-commit-ci/pre-commit-ci-config
     rev: v1.5.1
     hooks:
@@ -85,3 +95,4 @@ ci:
     - dprint
     - dasel-validate-bin
     - actionlint
+    - vale

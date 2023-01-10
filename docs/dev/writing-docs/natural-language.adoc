@@ -1,9 +1,9 @@
 = Natural language
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.5.0
-:revdate: 2022-08-06T11:00:12+09:00
-:revremark: add GitHub Action to lint
+:revnumber: v0.6.0
+:revdate: 2022-11-03T18:12:15+09:00
+:revremark: add link to git hook
 :description: Natural language
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -11,6 +11,7 @@
 :github_url: https://github.com
 :root_directory: ../../..
 :base_directory: {root_directory}/.vale/styles/Vocab/Base
+:pre_commit_config_file: {root_directory}/.pre-commit-config.yaml
 :workflows_directory: {root_directory}/.github/workflows
 
 == Lint
@@ -49,6 +50,11 @@ Preferred (`Vale.Terms`):: link:{base_directory}/accept.txt[accept.txt^]
 Avoid (`Vale.Avoid`):: `{base_directory}/reject.txt`
 
 
+.Git hooks
+pre-commit::
+  Use link:{pre_commit_config_file}#:~:text=id%3A%vale[
+  local hook^]
+
 :filename: lint-natural-language-text.yml
 :github_actions_marketplace_url: {github_url}/marketplace/actions
 :run_vale_with_reviewdog_link: link:{github_actions_marketplace_url}/vale-linter[vale-linter^]
@@ -65,6 +71,11 @@ Vale can check spelling (`Vale.Spelling`).
 We can ignore words in link:{base_directory}/vocab.txt[vocab.txt^] with
 link:{github_url}/errata-ai/vale/blob/v2/internal/rule/Vale/Spelling.yml[
 spell check^].
+
+.Git hooks
+pre-commit::
+  Use link:{pre_commit_config_file}#:~:text=id%3A%20vale[
+  local hook^]
 
 :filename: lint-natural-language-text.yml
 .GitHub Actions
