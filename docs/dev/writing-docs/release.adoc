@@ -1,15 +1,16 @@
 = Release
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.11.0
-:revdate: 2022-08-07T10:09:10+09:00
-:revremark: add release note section
+:revnumber: v0.12.0
+:revdate: 2022-08-07T10:15:57+09:00
+:revremark: add GitHub Action to create GitHub Release
 :description: Release
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
 :creation_date: 2022-07-14T16:37:15+09:00
 :github_url: https://github.com
 :root_directory: ../../..
+:workflows_directory: {root_directory}/.github/workflows
 
 :git_cliff_url: {github_url}/orhun/git-cliff
 Use link:{git_cliff_url}[git-cliff^] to generate CHANGELOG and Release Note.
@@ -315,6 +316,10 @@ security
 The format of release notes is different from xref:changelog[CHANGELOG.md].
 The format is based on link:https://keepachangelog.com/en/1.0.0/[
 Keep a Changelog^].
+
+.GitHub Actions
+link:{workflows_directory}/create-github-release.yml[
+Create GitHub Release on push tag^].
 
 :release_note_config_path: .git-cliff/release-note.toml
 .Configuration File
