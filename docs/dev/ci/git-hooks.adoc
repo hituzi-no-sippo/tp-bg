@@ -1,9 +1,9 @@
 = Git hooks
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.15.0
-:revdate: 2022-07-27T18:22:40+09:00
-:revremark: add git pre-commit hook to check files with shebang
+:revnumber: v0.17.0
+:revdate: 2022-07-27T18:34:04+09:00
+:revremark: add git pre-commit hook to check destroyed symlinks
 :description: Git hooks
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -85,6 +85,16 @@ wrong:: `{prefix_url}/blob/main/LICENSE#L1`
   Check for files with execute permission.
 * {check_shebang_scripts_are_executable_link}
   Check for file with shebang.
+
+:latest_version_of_pre_commit: v4.3.0
+=== Symlink
+
+:check_symlinks_link: link:{pre_commit_repository_url}#check-symlinks[check broken symlinks^]
+:destroyed_symlinks_link: link:{pre_commit_repository_url}#destroyed-symlinks[destroyed symlinks^]
+:destroyed_symlinks_test_permalink_url: {pre_commit_repository_url}/blob/{latest_version_of_pre_commit}/tests/destroyed_symlinks_test.py#L33-L39
+* {check_symlinks_link}
+* {destroyed_symlinks_link}
+  link:{destroyed_symlinks_test_permalink_url}[Related to `core.symlinks`^].
 
 === pre-commit
 
