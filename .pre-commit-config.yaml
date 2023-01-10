@@ -4,6 +4,31 @@ default_stages:
   - commit
 
 repos:
+  # Shell
+  # Format
+  - repo: local
+    hooks:
+      - id: shfmt
+        name: shfmt
+        language: system
+        entry: shfmt
+        args:
+          - --write
+          - --simplify
+        types:
+          - shell
+  # Lint
+  - repo: local
+    hooks:
+      - id: shellcheck
+        name: shellcheck
+        language: system
+        entry: shellcheck
+        args:
+          - --severity=style
+        types:
+          - shell
+
   # JSON & YAML
   # Formatter
   - repo: local
@@ -47,5 +72,7 @@ ci:
     for more information, see https://pre-commit.ci
 
   skip:
+    - shfmt
+    - shellcheck
     - dprint
     - dasel-validate-bin

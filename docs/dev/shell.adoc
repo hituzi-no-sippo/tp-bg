@@ -1,15 +1,16 @@
 = Shell
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.6.0
-:revdate: 2022-08-16T18:01:14+09:00
-:revremark: add GitHub Actions to lint format with reviewdog
+:revnumber: v0.10.0
+:revdate: 2022-08-18T21:02:22+09:00
+:revremark: add git hook for shellcheck
 :description: Shell
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
 :creation_date: 2022-07-24T16:00:52+09:00
 :github_url: https://github.com
 :root_directory: ../..
+:pre_commit_config_file: {root_directory}/.pre-commit-config.yaml
 :workflows_directory: {root_directory}/.github/workflows
 
 :github_actions_marketplace_url: {github_url}/marketplace/actions
@@ -18,6 +19,11 @@
 
 :shfmt_link: link:{github_url}/mvdan/sh[shfmt^]
 Use {shfmt_link}.
+
+.Git hooks
+pre-commit::
+  Use link:{pre_commit_config_file}#:~:text=id%3A%shfmt[
+  local hook^]
 
 :filename: lint-shell.yml
 :filename_on_pull_request: lint-shell-on-pull-request.yml
@@ -72,6 +78,13 @@ Use {shellcheck_link}.
 
 If you want to modify quotes automatically (`+${hoo}+` => `"$hoo"`), use link:{github_url}/anordal/shellharden[
 shellharden^].
+
+:pre_commit_for_shellcheck_url: {github_url}/koalaman/shellcheck-precommit
+:pre_commit_for_shellcheck_link: link:{pre_commit_for_shellcheck_url}[koalaman/shellcheck-precommit^]
+.Git hooks
+pre-commit::
+  Use link:{pre_commit_config_file}#:~:text=id%3A%20shellcheck[
+  local hook^]
 
 :filename: lint-shell.yml
 :filename_on_pull_request: lint-shell-on-pull-request.yml
