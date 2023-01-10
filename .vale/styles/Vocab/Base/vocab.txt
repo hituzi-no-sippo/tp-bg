@@ -6,3 +6,4 @@ reenable
 declaratively
 ci
 mergeability
+perf
