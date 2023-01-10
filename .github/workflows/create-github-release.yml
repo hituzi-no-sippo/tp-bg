@@ -1,0 +1,49 @@
+---
+name: Create GitHub Release
+
+on:
+  push:
+    tags:
+      - "v?[0-9]+.[0-9]+.[0-9]+"
+      - "v?[0-9]+.[0-9]+.[0-9]+-alpha.[0-9]+"
+      - "v?[0-9]+.[0-9]+.[0-9]+-beta.[0-9]+"
+      - "v?[0-9]+.[0-9]+.[0-9]+-rc.[0-9]+"
+
+jobs:
+  create:
+    name: Create GitHub Release
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          # Get the full git history to generate Release Note with git-cliff.
+          fetch-depth: 0
+
+      - name: Install Release Note generator
+        uses: aquaproj/aqua-installer@v2.0.2
+        with:
+          aqua_version: v1.30.3
+          aqua_opts: --tags git-cliff
+
+      - name: Generate release note with git-cliff
+        run: |
+          git-cliff \
+            --config .git-cliff/release-note.toml \
+            --output release-note.md
+
+      - name: Upload GitHub release
+        run: |
+          pre_release_regex='-(alpha|beta|rc)\.[0-9]+$'
+          if [[ "$GITHUB_REF_NAME" =~ $pre_release_regex ]]; then
+            flag="--prerelease"
+          fi
+          # shellcheck disable=SC2086
+          gh release create "$GITHUB_REF_NAME" \
+            $flag \
+            --notes-file release-note.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
