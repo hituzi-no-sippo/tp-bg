@@ -1,9 +1,9 @@
 = Template repository
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.20.0
-:revdate: 2022-08-16T18:06:33+09:00
-:revremark: add git-cliff of CHANGELOG generator
+:revnumber: v0.22.0
+:revdate: 2022-08-16T18:06:48+09:00
+:revremark: add Cocogitto of bump version
 :description: README for {doctitle}
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -117,6 +117,7 @@ Asciidoctor^] is required to lint an AsciiDoc file.
 :git_cliff_link: link:https://github.com/orhun/git-cliff[git-cliff^]
 [horizontal]
 Generate:: {git_cliff_link}
+Bump version:: {cocogitto_link}
 
 
 === dependence
@@ -158,6 +159,8 @@ See `docs/dev` for more details.
   Install aqua^]
 . Run link:./{setup_shell_path}[setup shell^] +
   `bash {setup_shell_path}`
+. Replace `{repository}`
+* link:./cliff.toml[^]
 . link:./docs/dev/dependence/renovate.adoc#setup[
   Setup Renovate^]
 . Install GitHub Apps

@@ -1,1 +1,4 @@
 ignore_merge_commits = true
+tag_prefix = "v"
+
+branch_whitelist = ["main"]
