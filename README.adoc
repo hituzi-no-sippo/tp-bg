@@ -1,9 +1,9 @@
 = Template repository
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.22.0
-:revdate: 2022-08-16T18:06:48+09:00
-:revremark: add Cocogitto of bump version
+:revnumber: v0.24.0
+:revdate: 2022-08-16T18:07:15+09:00
+:revremark: add markdownlint-cli of markdown linter
 :description: README for {doctitle}
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -111,6 +111,14 @@ Docs:: Vale
 link:https://asciidoctor.org[
 Asciidoctor^] is required to lint an AsciiDoc file.
 ====
+
+==== Markdown
+
+:markdown_plugin_link: link:{dprint_url}/plugins/markdown[Markdown plugin^]
+:markdownlint_cli_link: link:{github_url}/igorshubovych/markdownlint-cli[markdownlint-cli^]
+[horizontal]
+Format:: {dprint_link} with {markdown_plugin_link}
+Lint:: {markdownlint_cli_link}
 
 ==== Release
 

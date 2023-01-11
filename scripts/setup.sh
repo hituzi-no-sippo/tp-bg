@@ -43,6 +43,15 @@ function __setup_git_hooks() {
 		--hook-type pre-commit \
 		--hook-type commit-msg
 }
+function __setup_markdown_tools() {
+	info "Setup Markdown tools"
+
+	function __setup_linter() {
+		npm install
+	}
+
+	__setup_linter
+}
 
 function setup() {
 	info "Setup Start"
@@ -52,6 +61,7 @@ function setup() {
 	__setup_yaml_tools
 	__setup_natural_language
 	__setup_git_hooks
+	__setup_markdown_tools
 
 	info "Setup Complete"
 }

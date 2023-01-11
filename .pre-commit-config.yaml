@@ -40,6 +40,7 @@ repos:
         types_or:
           - json
           - yaml
+          - markdown
 
   # JSON
   # Lint
@@ -91,6 +92,13 @@ repos:
     rev: v1.6.22
     hooks:
       - id: actionlint
+
+  # Markdown
+  # Lint
+  - repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: v0.33.0
+    hooks:
+      - id: markdownlint-fix
 
   # Commit message
   # Lint

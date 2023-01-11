@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "markdownlint-cli": "^0.33.0"
+  },
+  "engines": {
+    "node": "18.13.0",
+    "npm": "9.3.0"
+  },
+  "volta": {
+    "node": "18.13.0",
+    "npm": "9.3.0"
+  }
+}
