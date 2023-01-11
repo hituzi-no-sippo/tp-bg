@@ -1,9 +1,9 @@
 = Markdown
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.6.0
-:revdate: 2022-08-07T13:02:12+09:00
-:revremark: add markdownlint-cli of linter
+:revnumber: v0.8.0
+:revdate: 2022-10-18T14:59:50+09:00
+:revremark: add link to configuration of rules for markdown linter
 :description: Markdown
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -35,6 +35,10 @@ pre-commit::
 :markdownlint_cli_repository_name: igorshubovych/markdownlint-cli
 :markdownlint_cli_link: link:{github_url}/{markdownlint_cli_repository_name}[markdownlint-cli^]
 Use {markdownlint_cli_link}.
+
+.Configuration Files
+* link:{root_directory}/.markdownlint.yml[Rules^]
+* link:{root_directory}/.markdownlintignore[Ignore file list^]
 
 Enable automerge of minor update on Renovate.
 
