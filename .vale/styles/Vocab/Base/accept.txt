@@ -15,3 +15,5 @@ shellharden
 yamllint
 [Tt]aplo
 [Cc]ocogitto
+[Hh]ardcoded
+[Gg]itleaks

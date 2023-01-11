@@ -93,6 +93,14 @@ repos:
     hooks:
       - id: actionlint
 
+  # Security
+  - repo: local
+    hooks:
+      - id: gitleaks
+        name: gitleaks
+        language: system
+        entry: gitleaks protect --verbose --redact --staged
+
   # Markdown
   # Lint
   - repo: https://github.com/igorshubovych/markdownlint-cli
@@ -198,6 +206,7 @@ ci:
     - taplo-lint
     - editorconfig-checker-system
     - actionlint
+    - gitleaks
     - vale
     - typos
     - lint-generated-CHANGELOG-with-markdown-linter

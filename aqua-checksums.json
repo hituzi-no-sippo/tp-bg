@@ -61,6 +61,11 @@
       "algorithm": "sha512"
     },
     {
+      "id": "github_release/github.com/zricethezav/gitleaks/v8.15.2/gitleaks_8.15.2_linux_x64.tar.gz",
+      "checksum": "43E007867E49376FAC8953FC1BE3BA540B4CEFACEC40EE9D4B465A9FB9AE3B8D",
+      "algorithm": "sha256"
+    },
+    {
       "id": "registries/github_content/github.com/aquaproj/aqua-registry/v3.120.0/registry.yaml",
       "checksum": "1c622d5e41eba06e62a3e65b5661a29d7eabf570b3442f3a532522816d6c70ffa819724d99ecb8159244090de29eea9d2755a47e0bb5c33904c3aa3bcb015f05",
       "algorithm": "sha512"
