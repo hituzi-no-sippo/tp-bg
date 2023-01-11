@@ -1,9 +1,9 @@
 = Template repository
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.28.0
-:revdate: 2022-12-06T18:24:16+09:00
-:revremark: add lizard of code complexity analyser
+:revnumber: v0.29.0
+:revdate: 2022-12-10T18:51:36+09:00
+:revremark: add lizard of code duplicate detector
 :description: README for {doctitle}
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -29,7 +29,7 @@ Lint:: {shellcheck_link}
 
 :lizard_link: link:http://www.lizard.ws[lizard^]
 [horizontal]
-Code Complexity:: {lizard_link}
+Code Complexity & Duplication Check:: {lizard_link}
 
 :dprint_url: https://dprint.dev
 :dprint_link: link:{dprint_url}[dprint^]
