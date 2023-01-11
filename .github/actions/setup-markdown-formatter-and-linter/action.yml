@@ -1,0 +1,21 @@
+---
+name: Setup Markdown formatter and Linter
+description: Setup Markdown formatter and Linter
+
+runs:
+  using: composite
+  steps:
+    - name: Install formatter
+      uses: aquaproj/aqua-installer@v2.0.2
+      with:
+        aqua_version: v1.30.3
+        aqua_opts: --tags dprint
+
+    - name: Setup Node
+      uses: actions/setup-node@v3
+      with:
+        node-version-file: package.json
+        cache: npm
+    - name: Install linter
+      shell: bash
+      run: npm ci
