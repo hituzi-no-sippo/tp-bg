@@ -1,15 +1,16 @@
 = Git commit message
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.6.0
-:revdate: 2022-07-11T21:19:10+09:00
-:revremark: add GitHub Bot to lint commit message
+:revnumber: v0.8.0
+:revdate: 2022-11-08T14:07:39+09:00
+:revremark: add commit-msg hook to format
 :description: Git commit message tools
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
 :creation_date: 2022-07-11T15:36:50+09:00
 :github_url: https://github.com
 :root_directory: ../../..
+:script_directory: scripts/git
 :pre_commit_config_file: {root_directory}/.pre-commit-config.yaml
 
 :conventional_commits_link: link:https://www.conventionalcommits.org[Conventional Commits^]
@@ -46,6 +47,26 @@ link:{root_directory}/.github/workflows/{filename}[{filename}^]
 
 link:https://github.com/apps/cocogitto-bot[
 Cocogitto-bot^] comments the lint error message on pull request event.
+
+== Format
+
+:format_commit_msg_path: {script_directory}/format-commit-msg.sh
+link:{root_directory}/{format_commit_msg_path}[
+Run `bash {format_commit_msg_path}` to format commit message^].
+
+.Using tools
+:dprint_url: https://dprint.dev
+:dprint_link: link:{dprint_url}[dprint^]
+:markdown_plugin_link: link:{dprint_url}/plugins/markdown[Markdown plugin^]
+:markdownlint_cli_link: link:{github_url}/igorshubovych/markdownlint-cli[markdownlint-cli^]
+* {dprint_link} with {markdown_plugin_link}
+* {markdownlint_cli_link}
+
+=== Git hooks
+
+commit-msg::
+  Use link:{pre_commit_config_file}#:~:text=id%3A%20format%2Dcommit%2Dmsg[
+  Format commit message (local hook)^]
 
 
 '''
