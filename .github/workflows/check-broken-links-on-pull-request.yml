@@ -1,0 +1,27 @@
+---
+name: Check broken links on pull request
+
+on: pull_request
+
+jobs:
+  check:
+    uses: ./.github/workflows/check-broken-links.yml
+
+  commet-to-pull-request:
+    name: Comment the report to pull request
+    needs: check
+    if: always() &&
+      needs.check.result == 'failure' &&
+      needs.check.outputs.report
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      pull-requests: write
+    steps:
+      - name: Comment the report to pull request
+        run: |
+          gh pr review \
+            --comment ${{ github.event.pull_request.html_url }} \
+            --body "${{ needs.check.outputs.report }}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
