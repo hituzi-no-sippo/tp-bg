@@ -85,6 +85,61 @@ repos:
       - id: editorconfig-checker-system
         files: ^.*\.ini$
 
+  # Code Analyze
+  - repo: local
+    hooks:
+      - id: check-code-complexity
+        name: Check nloc and CCN, parameter count of function
+        language: script
+        entry: scripts/code-analyze/check-code-complexity.sh
+        stages:
+          - commit
+        types_or:
+          - c
+          - c++
+          - c#
+          - objective-c
+          - java
+          - javascript
+          - ts
+          - tsx
+          - python
+          - ruby
+          - go
+          - rust
+          - kotlin
+          - php
+          - lua
+          - scala
+          - gdscript
+          - solidity
+      - id: check-code-duplication-rate
+        name: Check code duplication rate
+        language: script
+        entry: scripts/code-analyze/check-duplication-rate.sh
+          --duplicate 0 --unique 100
+        stages:
+          - commit
+        types_or:
+          - c
+          - c++
+          - c#
+          - objective-c
+          - java
+          - javascript
+          - ts
+          - tsx
+          - python
+          - ruby
+          - go
+          - rust
+          - kotlin
+          - php
+          - lua
+          - scala
+          - gdscript
+          - solidity
+
   # GitHub Actions
   # Lint
   # https://github.com/rhysd/actionlint/blob/main/docs/usage.md#pre-commit
@@ -228,6 +283,8 @@ ci:
     - taplo-format
     - taplo-lint
     - editorconfig-checker-system
+    - check-code-complexity
+    - check-code-duplication-rate
     - actionlint
     - gitleaks
     - vale

@@ -1,0 +1,37 @@
+---
+name: Check code complexity
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  check:
+    name: Check code complexity
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+      - name: Setup lizard
+        run: python -m pip install lizard
+
+      - name: Add matcher
+        run: echo "::add-matcher::.github/matchers/lizard.json"
+      - name: Output diff files
+        run: |
+          revision_range=$([[ "$GITHUB_EVENT_NAME" == 'pull_request' ]] && \
+            echo "origin/$GITHUB_BASE_REF...origin/$GITHUB_HEAD_REF" || \
+            echo "$(git rev-parse "$GITHUB_REF_NAME"^)"...HEAD \
+          )
+          git diff --name-only "$revision_range" > diff_files.txt
+      - name: Check code complexity
+        run: |
+          bash scripts/code-analyze/check-code-complexity.sh \
+            --input_file diff_files.txt

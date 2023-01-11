@@ -1,9 +1,9 @@
 = Template repository
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.27.0
-:revdate: 2022-12-31T13:09:33+09:00
-:revremark: add Gitleaks of detecting hardcoded secrets tool
+:revnumber: v0.29.0
+:revdate: 2022-12-10T18:51:36+09:00
+:revremark: add lizard of code duplicate detector
 :description: README for {doctitle}
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -24,6 +24,12 @@
 [horizontal]
 Format:: {shfmt_link}
 Lint:: {shellcheck_link}
+
+=== Code analyze
+
+:lizard_link: link:http://www.lizard.ws[lizard^]
+[horizontal]
+Code Complexity & Duplication Check:: {lizard_link}
 
 :dprint_url: https://dprint.dev
 :dprint_link: link:{dprint_url}[dprint^]

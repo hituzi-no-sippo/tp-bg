@@ -1,0 +1,49 @@
+= Duplication Check
+:author: hituzi no sippo
+:email: dev@hituzi-no-sippo.me
+:revnumber: v0.4.0
+:revdate: 2022-12-11T17:51:54+09:00
+:revremark: add GitHub Action to check code duplication rate
+:description: README
+:copyright: Copyright (C) 2022 {author}
+// Custom Attributes
+:creation_date: 2022-12-10T18:01:43+09:00
+:root_directory: ../../..
+:script_directory: {root_directory}/scripts/code-analyze
+:pre_commit_config_file: {root_directory}/.pre-commit-config.yaml
+:workflows_directory: {root_directory}/.github/workflows
+
+:lizard_url: https://github.com/terryyin/lizard
+:lizard_link: link:{lizard_url}[lizard^]
+== lizard
+
+.Supported Languages
+* C/C++ (works with C++14)
+* JavaScript (With ES6 and JSX) / TypeScript
+* Python
+* Golang
+* Rust
+
+link:{lizard_url}[This tool also support other than the above^].
+
+Use link:{script_directory}/check-duplication-rate.sh[
+shell script^] that use link:{lizard_url}#code-duplicate-detector[
+`-Eduplicate` flag^].
+
+link:{lizard_url}/blob/27642d4ad40c885850bf8a4a0d533244e4cce3ea/lizard_ext/lizardduplicate.py#L237[
+This target is a function of 70 tokens or more^].
+
+.Git hooks
+pre-commit::
+  Use link:{pre_commit_config_file}#:~:text=id%3A%20check%2Dcode%2Dduplication%2Drate[
+  local hook^].
+
+:filename: check-code-duplication-rate.yml
+.GitHub Actions
+* link:{workflows_directory}/{filename}[{filename}^]
+
+
+'''
+
+:author_link: link:https://github.com/hituzi-no-sippo[{author}^]
+Copyright (C) 2022 {author_link}
