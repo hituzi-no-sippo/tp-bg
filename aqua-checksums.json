@@ -11,6 +11,11 @@
       "algorithm": "sha512"
     },
     {
+      "id": "github_release/github.com/crate-ci/typos/v1.13.6/typos-v1.13.6-x86_64-unknown-linux-musl.tar.gz",
+      "checksum": "F8B06E9F20908340046F7EC00CCE62CC511423008DD880ABCBC50C81A5A64060053FD456E34DCF8808560277E02BD89ABA10E704C15A4EC89875E3460B3B2BD4",
+      "algorithm": "sha512"
+    },
+    {
       "id": "github_release/github.com/dprint/dprint/0.34.1/dprint-x86_64-unknown-linux-gnu.zip",
       "checksum": "2F05454EB573C8161DE0A71A1199E37B13D40ADAC50C5D154FA67AA66480A44B772E47F4F65D47071B683AF9B5B3B5390D5770AD5951D70D3F785DBC76168370",
       "algorithm": "sha512"

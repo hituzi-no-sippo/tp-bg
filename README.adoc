@@ -1,9 +1,9 @@
 = Template repository
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.24.0
-:revdate: 2022-08-16T18:07:15+09:00
-:revremark: add markdownlint-cli of markdown linter
+:revnumber: v0.25.0
+:revdate: 2022-08-16T18:08:10+09:00
+:revremark: add typos of spell checker for source codes
 :description: README for {doctitle}
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -102,8 +102,10 @@ Lint:: {vale_link}
 Spell Check::
 +
 --
+:typos_link: link:{github_url}/crate-ci/typos[typos^]
 [horizontal]
 Docs:: Vale
+Source Code:: {typos_link}
 --
 
 [CAUTION]

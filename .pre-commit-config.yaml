@@ -118,6 +118,18 @@ repos:
         types:
           - text
 
+  # Spell
+  - repo: local
+    hooks:
+      - id: typos
+        name: typos
+        language: system
+        entry: typos
+        args:
+          - --write-changes
+        types:
+          - text
+
   # CHANGELOG
   - repo: local
     hooks:
@@ -174,4 +186,5 @@ ci:
     - editorconfig-checker-system
     - actionlint
     - vale
+    - typos
     - lint-generated-CHANGELOG-with-markdown-linter
