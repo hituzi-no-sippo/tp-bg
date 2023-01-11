@@ -17,3 +17,5 @@ yamllint
 [Cc]ocogitto
 [Hh]ardcoded
 [Gg]itleaks
+node_modules
+markdownlint
