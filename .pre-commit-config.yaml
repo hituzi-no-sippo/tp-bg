@@ -124,6 +124,13 @@ repos:
         entry: scripts/git/format-commit-msg.sh
         stages:
           - commit-msg
+      # Natural Language
+      - id: lint-natural-language-text-of-commit-msg
+        name: lint natural language of commit message with vale
+        language: script
+        entry: scripts/git/lint-natural-language-text-of-commit-msg.sh
+        stages:
+          - commit-msg
 
   # Natural Language
   - repo: local
@@ -219,5 +226,6 @@ ci:
     - vale
     - typos
     - format-commit-msg
+    - lint-natural-language-text-of-commit-msg
     - lint-generated-CHANGELOG-with-markdown-linter
     - lychee
