@@ -1,9 +1,9 @@
 = Natural language
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.7.0
-:revdate: 2022-08-10T15:50:14+09:00
-:revremark: add typos of spell checker for source code
+:revnumber: v0.8.0
+:revdate: 2022-08-11T12:54:22+09:00
+:revremark: add link to configuration file of spell checker for source code
 :description: Natural language
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -86,6 +86,8 @@ pre-commit::
 === Source code
 
 Use link:{typos_url}[typos^].
+
+link:{root_directory}/.typos.toml[Configuration File^]
 
 .Supported file types
 * Shell
