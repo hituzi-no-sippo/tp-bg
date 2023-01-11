@@ -115,6 +115,15 @@ repos:
     rev: 93f9ff191297b6b2973bba4b203ac112bac5186d
     hooks:
       - id: lint-commit-msg-with-cocogitto
+  # Style
+  - repo: local
+    hooks:
+      - id: format-commit-msg
+        name: format commit message
+        language: script
+        entry: scripts/git/format-commit-msg.sh
+        stages:
+          - commit-msg
 
   # Natural Language
   - repo: local
@@ -209,5 +218,6 @@ ci:
     - gitleaks
     - vale
     - typos
+    - format-commit-msg
     - lint-generated-CHANGELOG-with-markdown-linter
     - lychee
