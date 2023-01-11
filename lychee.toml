@@ -1,1 +1,1 @@
-exclude_path = [".git"]
+exclude_path = [".git", "aqua"]
