@@ -1,3 +1,27 @@
+exclude = [
+  # For AsciiDoc
+  # Example
+  # `https://github.com/[GitHub]`
+  # `https://help.github.com/articles/about-status-checks/[GitHub Checks^]`
+  '\[.*',
+  # Example
+  # `:repository: hituzi-no-sippo/template-repository`
+  # `https://github.com/{repository}`
+  '%7B.*%7D',
+
+  # For GitHub
+  # Repository Setting
+  # Example
+  # hituzi-no-sippo/template-repository/settings/branch_protection_rules/new
+  "https://github.com/.*/settings/.*",
+  # Example
+  # Repository Generate
+  # https://github.com/hituzi-no-sippo/template-repository/generate
+  "https://github.com/.*/generate",
+
+  # For dprint
+  "https://plugins.dprint.dev/prettier-.*json@",
+]
 exclude_path = [
   ".git",
   "aqua",
