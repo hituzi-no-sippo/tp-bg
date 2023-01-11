@@ -71,6 +71,26 @@
       "minor": {
         "automerge": true
       }
+    },
+    {
+      "matchPackageNames": [
+        "markdownlint-cli"
+      ],
+      "matchManagers": [
+        "npm"
+      ],
+      "minor": {
+        "automerge": true
+      }
+    },
+    {
+      "matchPackagePatterns": [
+        "markdownlint-cli"
+      ],
+      "groupName": "markdownlint",
+      "addLabels": [
+        "markdown"
+      ]
     }
   ]
 }
