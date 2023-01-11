@@ -1,0 +1,88 @@
+---
+name: Create or update issue for broken links
+
+on:
+  # yamllint disable-line rule:empty-values
+  workflow_dispatch:
+  schedule:
+    - cron: "00 00 * * *"
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  GH_REPO: ${{ github.repository }}
+
+jobs:
+  check:
+    uses: ./.github/workflows/check-broken-links.yml
+
+  search-issue-to-update:
+    name: Search issue to update
+    needs: check
+    if: always() &&
+      needs.check.result == 'failure' &&
+      needs.check.outputs.report
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      issue-number: ${{ steps.search.outputs.issue-number}}
+    permissions:
+      issues: read
+    steps:
+      - name: Search Issue
+        id: search
+        run: |
+          number=$(
+            gh issue list \
+              --search 'Link Checker Report in:title' \
+              --label 'good first issue' \
+              --label 'documentation' \
+              --label 'report' \
+              --label 'automated issue' \
+              --state open \
+              --json number \
+              --jq '.[].number' \
+              --limit 1
+          )
+          echo "issue-number=$number" >> "${GITHUB_OUTPUT}"
+
+  update-issue-body:
+    name: Update issue body
+    needs:
+      - check
+      - search-issue-to-update
+    if: always() &&
+      needs.check.outputs.report &&
+      needs.search-issue-to-update.outputs.issue-number
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      issues: write
+    steps:
+      - name: Update issue
+        run: |
+          gh issue edit \
+            "${{needs.search-issue-to-update.outputs.issue-number}}" \
+            --body "${{ needs.check.outputs.report }}"
+
+  create-issue:
+    name: Create issue
+    needs:
+      - check
+      - search-issue-to-update
+    if: always() &&
+      needs.check.outputs.report &&
+      !needs.search-issue-to-update.outputs.issue-number
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      issues: write
+    steps:
+      - name: Create issue
+        # If we create issue with 'gh issue create' command,
+        # we need to create label to use.
+        uses: dacbd/create-issue-action@v1
+        with:
+          title: Link Checker Report
+          body: ${{ needs.check.outputs.report }}
+          labels: documentation, good first issue, report, automated issue
+          token: ${{ github.token }}

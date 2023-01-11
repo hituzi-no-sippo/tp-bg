@@ -1,0 +1,63 @@
+---
+name: Check broken links
+description: Check broken links with lychee
+
+inputs:
+  inputs:
+    description: Lychee inputs
+    required: true
+  output:
+    description: Output markdown file path
+    required: false
+    default: lychee-report.md
+
+runs:
+  using: composite
+  steps:
+    - name: Install link checker and TOML processor
+      uses: aquaproj/aqua-installer@v2.0.2
+      with:
+        aqua_version: v1.30.3
+        aqua_opts: --tags lychee,dasel
+
+    - name: Output link list
+      run: |
+        lychee --dump ${{ inputs.inputs }} | sort | uniq > link_list
+      shell: bash
+
+    - name: Restore lychee cache
+      uses: actions/cache@v3.2.3
+      with:
+        path: .lycheecache
+        key: lychee-cache-${{ hashFiles('link_list') }}
+        restore-keys: lychee-cache-
+
+    - name: Add the link list file to the exclusion files of the link checker
+      # Don't use `lychee --exclude-path link_list`.
+      # It will overwrite the exclude files in
+      # the lychee configuration file (`lychee.toml`).
+      run: |
+        dasel put \
+          --value "link_list" \
+          --file lychee.toml \
+          --selector "exclude_path.[]"
+      shell: bash
+
+    - name: Check broken url with lychee
+      # Don't use `lychee ... link_list`.
+      # We don't know which file is causing the error.
+      run: |
+        lychee \
+          --format markdown \
+          --output "${{ inputs.output }}" \
+          --cache --max-cache-age 1d \
+          --github-token ${{ github.token }} \
+          --verbose \
+          --no-progress \
+          ${{ inputs.inputs }}
+      shell: bash
+
+    - name: Add a job summary
+      if: always()
+      run: cat "${{ inputs.output }}" > "${GITHUB_STEP_SUMMARY}"
+      shell: bash
