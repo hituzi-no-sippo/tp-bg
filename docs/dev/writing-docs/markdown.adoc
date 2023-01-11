@@ -1,9 +1,9 @@
 = Markdown
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.4.0
-:revdate: 2022-07-30T12:00:25+09:00
-:revremark: Add pre-commit to check format
+:revnumber: v0.5.0
+:revdate: 2022-07-30T12:25:17+09:00
+:revremark: Add GitHub Action to check format
 :description: Markdown
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -11,6 +11,7 @@
 :github_url: https://github.com
 :root_directory: ../../..
 :pre_commit_config_file: {root_directory}/.pre-commit-config.yaml
+:workflows_directory: {root_directory}/.github/workflows
 
 == Format
 
@@ -24,6 +25,10 @@ link:{root_directory}/.dprint.json[Configuration File^]
 pre-commit::
   Use link:{pre_commit_config_file}#:~:text=id%3A%20dprint[
   local hook^]
+
+:filename: lint-markdown.yml
+.GitHub Actions
+* link:{workflows_directory}/{filename}[{filename}^]
 
 
 '''
