@@ -131,6 +131,13 @@ repos:
         entry: scripts/git/lint-natural-language-text-of-commit-msg.sh
         stages:
           - commit-msg
+      # Link
+      - id: check-broken-links-of-commit-msg
+        name: check broken links of commit message with lychee
+        language: script
+        entry: scripts/git/check-broken-links-of-commit-msg.sh
+        stages:
+          - commit-msg
 
   # Natural Language
   - repo: local
@@ -228,4 +235,5 @@ ci:
     - format-commit-msg
     - lint-natural-language-text-of-commit-msg
     - lint-generated-CHANGELOG-with-markdown-linter
+    - check-broken-links-of-commit-msg
     - lychee
