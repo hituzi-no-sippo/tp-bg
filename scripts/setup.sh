@@ -43,6 +43,11 @@ function __setup_git_hooks() {
 		--hook-type pre-commit \
 		--hook-type commit-msg
 }
+function __setup_code_analyzer() {
+	info "Setup code analyzer"
+
+	python -m pip install --upgrade lizard
+}
 function __setup_markdown_tools() {
 	info "Setup Markdown tools"
 
@@ -61,6 +66,7 @@ function setup() {
 	__setup_yaml_tools
 	__setup_natural_language
 	__setup_git_hooks
+	__setup_code_analyzer
 	__setup_markdown_tools
 
 	info "Setup Complete"
