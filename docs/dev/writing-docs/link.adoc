@@ -1,14 +1,16 @@
 = Link
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.3.0
-:revdate: 2022-09-24T17:57:23+09:00
-:revremark: add link to configuration file of checker
+:revnumber: v0.4.0
+:revdate: 2022-09-25T08:21:56+09:00
+:revremark: add git hook to check broken lins
 :description: Link
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
 :creation_date: 2022-09-24T17:45:13+09:00
+:github_url: https://github.com
 :root_directory: ../../..
+:pre_commit_config_file: {root_directory}/.pre-commit-config.yaml
 
 == Checker
 
@@ -17,6 +19,12 @@
 Use {link_checker_link}.
 
 link:{root_directory}/lychee.toml[Configuration File^]
+
+.Git hooks
+pre-commit::
+  Use link:{pre_commit_config_file}#:~:text=id%3A%20lychee[
+  local hook^]
+
 
 '''
 

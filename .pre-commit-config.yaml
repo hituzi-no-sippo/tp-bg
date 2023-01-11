@@ -139,6 +139,19 @@ repos:
         entry: scripts/release/lint-generated-CHANGELOG.sh
         files: cliff.toml
 
+  # Link
+  - repo: local
+    hooks:
+      - id: lychee
+        name: lychee
+        language: system
+        entry: lychee --verbose --no-progress
+        args:
+          - --cache
+          - --max-cache-age=1d
+        types:
+          - text
+
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.4.0
     hooks:
@@ -188,3 +201,4 @@ ci:
     - vale
     - typos
     - lint-generated-CHANGELOG-with-markdown-linter
+    - lychee
