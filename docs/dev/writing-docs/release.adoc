@@ -1,9 +1,9 @@
 = Release
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.12.0
-:revdate: 2022-08-07T10:15:57+09:00
-:revremark: add GitHub Action to create GitHub Release
+:revnumber: v0.13.0
+:revdate: 2022-11-03T14:21:37+09:00
+:revremark: add link to shell script to lint generated CHANGELOG
 :description: Release
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -309,6 +309,17 @@ perf(protect): secret scanner
 
 security
 ....
+
+=== Lint
+
+:lint_generated_CHANGELOG_shell_path: scripts/release/lint-generated-CHANGELOG.sh
+link:{root_directory}/{lint_generated_CHANGELOG_shell_path}[
+Run `bash {lint_generated_CHANGELOG_shell_path}` to lint generated CHANGELOG
+with git-cliff^].
+
+.`lint-generated-CHANGELOG.sh`
+. Use dprint to check markdown format
+. Use markdownlint-cli to lint markdown
 
 
 == Release note
