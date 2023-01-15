@@ -1,9 +1,9 @@
 = Release
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.3.0
-:revdate: 2023-01-24T21:59:34+09:00
-:revremark: add link to config file
+:revnumber: v0.4.0
+:revdate: 2023-01-15T21:27:20+09:00
+:revremark: add pre-release version
 :description: Release
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -25,6 +25,13 @@ Use link:{git_cliff_url}[git-cliff^] to generate CHANGELOG.
 .Configuration File
 link:{root_directory}/cliff.toml[cliff.toml^] +
 `cliff.toml` is git-cliff default configuration file path.
+
+[NOTE]
+.Pre-release version
+====
+The commits in `v1.0.0-<alpha|beta|rc>.1` tag
+will be included into `v1.0.0` tag.
+====
 
 .Reference Configuration
 * {detailed_config_link}
