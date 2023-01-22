@@ -1,9 +1,9 @@
 = Template repository
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.29.0
-:revdate: 2022-12-10T18:51:36+09:00
-:revremark: add lizard of code duplicate detector
+:revnumber: v0.30.0
+:revdate: 2023-01-22T14:48:10+09:00
+:revremark: add TODO
 :description: README for {doctitle}
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -195,6 +195,44 @@ See `docs/dev` for more details.
   pre-commit ci^]
 * link:{github_url}/apps/cocogitto-bot[
   Cocogitto-bot^]
+
+== TODO
+
+:lefthook_url: {github_url}/evilmartians/lefthook
+:lefthook_link: {lefthook_url}[Lefthook^]
+:pre_commit_hooks_link: https://github.com/pre-commit/pre-commit-hooks[pre-commit-hooks^]
+* [ ] Migration git hook manager from pre-commit to {lefthook_link} +
+  Need to create scripts to replace {pre_commit_hooks_link}. +
+  link:{lefthook_url}/wiki/Comparison-with-other-solutions#pre-commit[
+  Comparison between lefthook and pre-commit^].
+
+:licensed_link: {github_url}/github/licensed[Licensed^]
+* [ ] Add a tool to verify the licenses of dependencies +
+  Use {licensed_link}.
+
+:github_docs_url: https://docs.github.com/en
+:github_communities_docs_url: {github_docs_url}/communities
+:healthy_contributions_docs_url: {github_communities_docs_url}/setting-up-your-project-for-healthy-contributions
+:default_community_health_file_url: {healthy_contributions_docs_url}/creating-a-default-community-health-file
+* [ ] link:{default_community_health_file_url}[
+      Add default community health files^]
+** [ ] link:{github_communities_docs_url}/using-templates-to-encourage-useful-issues-and-pull-requests/about-issue-and-pull-request-templates[
+   Issue and pull request templates^]
+** [ ] link:{healthy_contributions_docs_url}/setting-guidelines-for-repository-contributors[
+   CONTRIBUTING.md^]
+** [ ] link:{healthy_contributions_docs_url}/adding-a-code-of-conduct-to-your-project[
+   CODE_OF_CONDUCT.md^]
+** [ ] link:{healthy_contributions_docs_url}/adding-support-resources-to-your-project[
+   SUPPORT.md^]
+** link:{default_community_health_file_url}#creating-a-repository-for-default-files[
+   The following Community health files are
+   designed to reference the default files (`<GITHUB_USER_NAME>/.github`)^]
+*** link:{github_docs_url}/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/displaying-a-sponsor-button-in-your-repository[
+    FUNDING.yml^]
+*** link:{github_docs_url}/discussions/managing-discussions-for-your-community/creating-discussion-category-forms[
+    Discussion category forms^]
+*** link:{github_docs_url}/code-security/getting-started/adding-a-security-policy-to-your-repository[
+    SECURITY.md^]
 
 
 '''

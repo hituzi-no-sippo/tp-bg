@@ -19,3 +19,4 @@ yamllint
 [Gg]itleaks
 node_modules
 markdownlint
+[Ll]efthook
