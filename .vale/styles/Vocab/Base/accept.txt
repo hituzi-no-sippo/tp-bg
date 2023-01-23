@@ -1,0 +1,5 @@
+[Aa]sciidoctor
+[Dd]ependabot
+npm
+dockerfile
+gomod

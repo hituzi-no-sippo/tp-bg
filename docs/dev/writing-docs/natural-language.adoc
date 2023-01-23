@@ -1,9 +1,9 @@
 = Natural language
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.3.0
+:revnumber: v0.4.0
 :revdate: 2022-07-25T15:51:18+09:00
-:revremark: add spell check
+:revremark: add vocabularies
 :description: Natural language
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -34,6 +34,19 @@ link:{root_directory}/.vale.ini[Configuration File^]
 :vale_topic_docs_url: {vale_url}/docs/topics
 For more supported file types,
 please read link:{vale_topic_docs_url}/scoping[Vale Scoping^].
+
+=== Vocabularies
+
+link:{vale_topic_docs_url}/vocab/[
+Vale can define preferred and avoid vocabulary terms^].
+
+We define terms into the following files:
+
+.Term Files
+[horizontal]
+Preferred (`Vale.Terms`):: link:{base_directory}/accept.txt[accept.txt^]
+Avoid (`Vale.Avoid`):: `{base_directory}/reject.txt`
+
 
 == Spell check
 
