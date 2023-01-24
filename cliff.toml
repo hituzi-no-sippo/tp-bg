@@ -39,7 +39,7 @@ commit_parsers = [
   { message = "^ci", group = "CI" },
   { message = "^chore\\(release\\): prepare for", skip = true },
   { message = "^chore", group = "Miscellaneous Tasks" },
-  { body = ".*security", group = "Security" },
+  { message = "^(feat|fix|perf|revert)(.|\n)*security", group = "Security" },
 ]
 protect_breaking_commits = false
 filter_commits = false

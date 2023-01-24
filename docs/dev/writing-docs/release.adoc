@@ -1,9 +1,9 @@
 = Release
 :author: hituzi no sippo
 :email: dev@hituzi-no-sippo.me
-:revnumber: v0.5.0
-:revdate: 2023-01-24T22:36:51+09:00
-:revremark: add replacement for issue numbers
+:revnumber: v0.6.0
+:revdate: 2023-01-24T22:03:42+09:00
+:revremark: add security group
 :description: Release
 :copyright: Copyright (C) 2022 {author}
 // Custom Attributes
@@ -47,6 +47,28 @@ Use `commit_preprocessors`^].
 `ticket #1`:: `Ticket #1`
 `ticket #1 (#1)`:: `Ticket #1 ([#1]({git_commit_message_example_issues_url}/1))`
 `ticket #1 (close #1)`:: `Ticket #1 (close [#1]({git_commit_message_example_issues_url}/1))`
+
+=== Security Group
+
+The next commit is Security Group:
+
+* "Security" is included in the commit message.
+* The following four commit types
+** feat
+** fix
+** perf
+** revert
+
+.For Examples
+* `fix(security): fix private key`
+* `feat(key): security`
+* {empty}
++
+....
+perf(protect): secret scanner
+
+security
+....
 
 
 '''
