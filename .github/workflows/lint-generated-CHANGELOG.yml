@@ -25,7 +25,7 @@ jobs:
       - name: Install CHANGELOG generator
         uses: aquaproj/aqua-installer@v2.0.2
         with:
-          aqua_version: v1.32.1
+          aqua_version: v1.32.2
           aqua_opts: --tags git-cliff
 
       - name: Setup Markdown formatter and linter
