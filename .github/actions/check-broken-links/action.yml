@@ -20,7 +20,7 @@ runs:
     - name: Install link checker and TOML processor
       uses: aquaproj/aqua-installer@v2.0.2
       with:
-        aqua_version: v1.32.1
+        aqua_version: v1.32.2
         aqua_opts: --tags lychee,dasel
 
     - name: Output link list
