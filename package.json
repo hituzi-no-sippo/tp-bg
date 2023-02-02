@@ -7,7 +7,9 @@
   },
   "engines": {
     "node": "18.13.0",
-    "npm": "9.3.0"
+    "npm": "9.3.0",
+    "pnpm": "Use npm please",
+    "yarn": "Use npm please"
   },
   "volta": {
     "node": "18.13.0",
