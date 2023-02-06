@@ -8,7 +8,7 @@ runs:
     - name: Install formatter
       uses: aquaproj/aqua-installer@v2.0.2
       with:
-        aqua_version: v1.32.3
+        aqua_version: v1.33.0
         aqua_opts: --tags dprint
 
     - name: Setup Node
