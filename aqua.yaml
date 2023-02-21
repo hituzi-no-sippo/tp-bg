@@ -9,6 +9,6 @@ checksum:
 registries:
   - type: standard
     # yamllint disable-line rule:comments
-    ref: v3.135.0 # renovate: depName=aquaproj/aqua-registry
+    ref: v3.136.0 # renovate: depName=aquaproj/aqua-registry
 packages:
   - import: aqua/*.yaml
