@@ -3,6 +3,6 @@ packages:
   - name: errata-ai/vale@v2.23.0
     tags:
       - vale
-  - name: crate-ci/typos@v1.13.10
+  - name: crate-ci/typos@v1.13.12
     tags:
       - typos
