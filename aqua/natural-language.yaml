@@ -1,8 +1,8 @@
 ---
 packages:
-  - name: errata-ai/vale@v2.23.0
+  - name: errata-ai/vale@v2.23.3
     tags:
       - vale
-  - name: crate-ci/typos@v1.13.12
+  - name: crate-ci/typos@v1.13.14
     tags:
       - typos
