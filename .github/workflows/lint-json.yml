@@ -22,7 +22,7 @@ jobs:
       - name: Install formatter
         uses: aquaproj/aqua-installer@v2.0.2
         with:
-          aqua_version: v1.35.0
+          aqua_version: v1.36.0
           aqua_opts: --tags dprint
 
       - name: Check format
@@ -38,7 +38,7 @@ jobs:
       - name: Install validator
         uses: aquaproj/aqua-installer@v2.0.2
         with:
-          aqua_version: v1.35.0
+          aqua_version: v1.36.0
           aqua_opts: --tags dasel
 
       - name: Validate JSON
