@@ -144,7 +144,7 @@ repos:
   # Lint
   # https://github.com/rhysd/actionlint/blob/main/docs/usage.md#pre-commit
   - repo: https://github.com/rhysd/actionlint
-    rev: v1.6.23
+    rev: v1.6.25
     hooks:
       - id: actionlint
 
