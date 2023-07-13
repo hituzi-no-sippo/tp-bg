@@ -159,7 +159,7 @@ repos:
   # Markdown
   # Lint
   - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.33.0
+    rev: v0.35.0
     hooks:
       - id: markdownlint-fix
 
