@@ -23,7 +23,7 @@ jobs:
           fetch-depth: 0
 
       - name: Install CHANGELOG generator
-        uses: aquaproj/aqua-installer@v2.0.2
+        uses: aquaproj/aqua-installer@v2.1.2
         with:
           aqua_version: v1.36.0
           aqua_opts: --tags git-cliff
