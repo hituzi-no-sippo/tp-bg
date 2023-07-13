@@ -22,7 +22,7 @@ jobs:
       - name: Install formatter
         uses: aquaproj/aqua-installer@v2.1.2
         with:
-          aqua_version: v1.36.0
+          aqua_version: v1.38.0
           aqua_opts: --tags taplo
 
       - name: Check format
@@ -38,7 +38,7 @@ jobs:
       - name: Install linter
         uses: aquaproj/aqua-installer@v2.1.2
         with:
-          aqua_version: v1.36.0
+          aqua_version: v1.38.0
           aqua_opts: --tags taplo
 
       - name: Lint
