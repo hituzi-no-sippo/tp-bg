@@ -1,6 +1,6 @@
 ---
 packages:
-  - name: errata-ai/vale@v2.28.0
+  - name: errata-ai/vale@v2.28.1
     tags:
       - vale
   - name: crate-ci/typos@v1.16.1
