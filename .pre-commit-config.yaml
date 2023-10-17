@@ -80,7 +80,7 @@ repos:
   # INI
   # Format
   - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
-    rev: 2.7.2
+    rev: 2.7.3
     hooks:
       - id: editorconfig-checker-system
         files: ^.*\.ini$
