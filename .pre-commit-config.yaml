@@ -45,7 +45,7 @@ repos:
   # JSON
   # Lint
   - repo: https://github.com/TomWright/dasel
-    rev: v2.3.6
+    rev: v2.4.1
     hooks:
       - id: dasel-validate-bin
         types:
