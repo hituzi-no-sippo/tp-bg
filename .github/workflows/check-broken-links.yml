@@ -20,7 +20,7 @@ jobs:
     env:
       REPORT_FILE: report.md
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Check broken links
         uses: ./.github/actions/check-broken-links
