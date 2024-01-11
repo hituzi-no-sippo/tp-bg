@@ -29,7 +29,7 @@ runs:
       shell: bash
 
     - name: Restore lychee cache
-      uses: actions/cache/restore@v3.2.6
+      uses: actions/cache/restore@v3.3.3
       id: cache-restore
       with:
         path: .lycheecache
@@ -67,7 +67,7 @@ runs:
       shell: bash
 
     - name: Save lychee cache
-      uses: actions/cache/save@v3.2.6
+      uses: actions/cache/save@v3.3.3
       # Composite action boolean inputs are actually strings
       # https://github.com/actions/runner/issues/1483#issuecomment-1042393939
       if: |
