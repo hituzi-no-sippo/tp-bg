@@ -7,12 +7,12 @@
   },
   "engines": {
     "node": "18.16.1",
-    "npm": "9.8.1",
+    "npm": "9.9.3",
     "pnpm": "Use npm please",
     "yarn": "Use npm please"
   },
   "volta": {
     "node": "18.16.1",
-    "npm": "9.8.1"
+    "npm": "9.9.3"
   }
 }
