@@ -6,13 +6,13 @@
     "markdownlint-cli": "^0.37.0"
   },
   "engines": {
-    "node": "18.16.1",
+    "node": "18.20.4",
     "npm": "9.8.1",
     "pnpm": "Use npm please",
     "yarn": "Use npm please"
   },
   "volta": {
-    "node": "18.16.1",
+    "node": "18.20.4",
     "npm": "9.8.1"
   }
 }
