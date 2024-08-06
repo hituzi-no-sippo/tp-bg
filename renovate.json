@@ -27,10 +27,9 @@
   ],
   "semanticCommits": "enabled",
   "configMigration": true,
-
   "packageRules": [
     {
-      "matchPaths": [
+      "matchFileNames": [
         "aqua.yaml",
         "aqua/*.yaml"
       ],
@@ -43,15 +42,15 @@
       }
     },
     {
-      "matchPackagePatterns": [
-        "aquaproj/aqua"
-      ],
       "addLabels": [
         "aqua"
       ],
       "minor": {
         "automerge": true
-      }
+      },
+      "matchPackageNames": [
+        "/aquaproj/aqua/"
+      ]
     },
     {
       "matchManagers": [
@@ -84,12 +83,12 @@
       }
     },
     {
-      "matchPackagePatterns": [
-        "markdownlint-cli"
-      ],
       "groupName": "markdownlint",
       "addLabels": [
         "markdown"
+      ],
+      "matchPackageNames": [
+        "/markdownlint-cli/"
       ]
     }
   ]
