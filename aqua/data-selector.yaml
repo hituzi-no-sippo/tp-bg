@@ -1,5 +1,5 @@
 ---
 packages:
-  - name: TomWright/dasel@v2.3.4
+  - name: TomWright/dasel@v2.8.1
     tags:
       - dasel
