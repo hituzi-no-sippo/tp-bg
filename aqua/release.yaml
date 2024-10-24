@@ -1,5 +1,5 @@
 ---
 packages:
-  - name: orhun/git-cliff@v1.2.0
+  - name: orhun/git-cliff@v1.4.0
     tags:
       - git-cliff
