@@ -25,7 +25,7 @@ jobs:
       - name: Install Release Note generator
         uses: aquaproj/aqua-installer@v2.1.2
         with:
-          aqua_version: v1.38.0
+          aqua_version: v2.36.2
           aqua_opts: --tags git-cliff
 
       - name: Generate release note with git-cliff

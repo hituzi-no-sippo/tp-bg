@@ -14,7 +14,7 @@ jobs:
       - name: Install spell checker
         uses: aquaproj/aqua-installer@v2.1.2
         with:
-          aqua_version: v1.38.0
+          aqua_version: v2.36.2
           aqua_opts: --tags typos
 
       - name: Add matcher
